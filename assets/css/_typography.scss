@@ -1,7 +1,7 @@
 // Typography
 
 html {
-  font-family: "Gotham", Gotham, "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Adelle Sans', 'adelle-sans', Adelle Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: $c-text;
 }
@@ -12,9 +12,7 @@ html, html a {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
-h1 {
-  font-family: "adelle-sans";
-}
+h1 {}
 
 h2 {}
 
