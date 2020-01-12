@@ -24,6 +24,9 @@
 @import "_typography.scss";
 
 // Style
+@import "_header.scss";
+
+// Style
 @import "_style.scss";
 
 html, body {
@@ -43,7 +46,7 @@ html, body {
 
 @media only screen and (min-width: 768px) {
 	.inner {
-		max-width: 600px;
+		max-width: 880px;
 		margin: 0 auto;
 	}
 }
@@ -108,8 +111,16 @@ html, body {
 	// border-radius: 50%;
 }
 
+.icon-12 {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	background-size: 12px 12px;
+}
+
 $close: url(../img/close.png);
 $lines: url(../img/lines.png);
+$lines_12: url(../img/lines_12.png);
 $contact: url(../img/contact.png);
 $mute: url(../img/mute.png);
 $play: url(../img/play.png);
@@ -124,6 +135,9 @@ $avatarProjectThumb: url(../img/avatar_project_thumb.png);
 	background-image: $lines;
 }
 
+.icon-lines-12 {
+	background-image: $lines_12;
+}
 .icon-contact {
 	background-image: $contact;
 }
@@ -158,48 +172,6 @@ $avatarProjectThumb: url(../img/avatar_project_thumb.png);
 				width: 100%;
 			}
 		}
-	}
-}
-
-//
-//  Header  //
-//
-
-header#site-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 4px;
-	z-index: 11;
-
-	.circle-button {
-		background-color: rgba(255,255,255,0.1);
-		margin: 8px;
-		@extend .shadow-soft;
-	}
-
-	#about-nav {
-		display: block;
-		flex-grow: 2;
-		background-color: rgba(255,255,255,0.1);
-		border-radius: 22px;
-		font-family: $raleway;
-		text-transform: uppercase;
-		color: $white;
-		letter-spacing: 1.2px;
-		text-align: center;
-		line-height: 20px;
-		padding: 12px;
-		margin: 8px;
-		font-size: $type-large;
-		@extend .shadow-soft;
-	}
-
-	.inner {
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-between;
 	}
 }
 

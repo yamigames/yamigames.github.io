@@ -16,6 +16,7 @@ html { font-size: 16px; }
 $type-xlarge: 2.375em;
 $type-large: 1.5em;
 $type-medium: 1.125em;
+$type-normal: 1em;
 $type-small: .9375em;
 
 .type-xlarge {
@@ -32,6 +33,12 @@ $type-small: .9375em;
 
 .type-medium {
 	font-size: $type-medium;
+	letter-spacing: 0;
+	line-height: 1.4em;
+}
+
+.type-normal {
+	font-size: $type-normal;
 	letter-spacing: 0;
 	line-height: 1.3em;
 }

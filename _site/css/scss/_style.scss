@@ -1,1 +1,27 @@
 // Style
+
+// ======================================================//
+// Home
+// ======================================================//
+
+.home-hero {
+	padding-top: 50px; // Fixed header spacing
+	height: 490px;
+	background-color: $black;
+
+	.inner {
+		padding: 0 16px;
+		position: relative;
+		height: 100%;
+	}
+
+	.tagline {
+		width: 50%;
+	}
+
+	.button {
+		position: absolute;
+		bottom: 84px;
+		left: 0;
+	}
+}
