@@ -5,7 +5,7 @@ title: Nate Butler · Product Designer
 
 <section class="home-hero type-light">
   <div class="inner">
-    <h1 class="space-top-xlarge">A World of Creative Vision</h1>
+    <h1 class="space-top-xlarge">Something About Creative Vision</h1>
     <h3 class="tagline space-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aliquid error incidunt.</h3>
     <div id="play-showreel" class="button light">
       <i class="icon icon-play"></i>
@@ -17,9 +17,10 @@ title: Nate Butler · Product Designer
 <section class="home content">
   <div class="inner">
     <!-- Project Loop -->
-    {%- for project in collections.project -%}
+    {%- assign projects = collections.project | reverse -%}
+    {%- for project in projects -%}
       <a href="{{ project.url }}">
-        <div class="card project" style="background-color: #{{ project.data.themecolor }};">
+        <div class="card project {{ project.data.textcolor }}" style="background-color: #{{ project.data.themecolor }};">
           <div class="info">
             <div class="meta">
               <p>{{ project.data.year }} · {{ project.data.company }}</p>
