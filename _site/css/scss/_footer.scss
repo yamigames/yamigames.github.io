@@ -4,6 +4,7 @@
 	position: relative;
 	padding: 24px;
 	overflow: hidden;
+	background-color: $black;
 	// background-color: $green-dark;
 
 	.content {
@@ -13,12 +14,11 @@
 
 	h1 {
 		color: white;
-		text-align: right;
 		margin-bottom: 24px;
 	}
 
 	ul {
-		text-align: right;
+		// text-align: right;
 	}
 
 	ul > li {
@@ -41,6 +41,7 @@
 
 	.footer-intro {
 		margin-top: 16px;
+		max-width: 520px;
 		&::after {
 			display: block;
 			content: "";
@@ -91,44 +92,5 @@
 	footer {
 		text-align: center;
 		padding: 16px;
-	}
-
-	.small-circle {
-		position: absolute;
-		top: 12vw;
-		left: -15vw;
-		width: 67vw;
-		height: 67vw;
-		background: $green-light;
-		box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
-		-webkit-border-radius: 50%; 
-		-moz-border-radius: 50%; 
-		border-radius: 50%;
-		z-index: 1;
-	}
-
-	.large-circle {
-		position: absolute;
-		top: 0px;
-		left: -10vw;
-		width: 160vw;
-		height: 160vw;
-		background: $green-dark;
-		box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
-		-webkit-border-radius: 50%; 
-		-moz-border-radius: 50%; 
-		border-radius: 50%;
-		z-index: 1;
-	}
-
-	.bg-rect {
-		position: absolute;
-		top: 60vw;
-		left: 0;
-		width: 160vw;
-		height: 160vw;
-		background: $green-dark;
-		// box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
-		z-index: 1;
 	}
 }
