@@ -85,10 +85,10 @@ body {
 	}
 
 	&.white {
-		background-color: $white;
+		background-color: #fff;
 		color: $black;
 		&:hover {
-			background-color: darken($white, 10%);
+			background-color: darken($white, 5%);
 		}
 	}
 

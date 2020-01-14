@@ -42,6 +42,9 @@
 			&:first-child {
 				font-weight: 600;
 			}
+			&:nth-child(2) {
+				font-size: 0.95em;
+			}
 
 			a {
 				color: white;

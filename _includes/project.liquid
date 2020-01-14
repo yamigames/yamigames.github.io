@@ -4,24 +4,25 @@
   <body>
     {% include overlay %}
     {% include header %}
-    <div class="page-header type-light">
-      <div class="header-spacer"></div>
+    <section class="page-header type-dark" style="background-color: #{{ themecolor }}; background-image: url(/img/{{ heroImage }});">
       <div class="inner">
-        <div class="project-header">
-          <h4>{{ year }} · Project</h4>
+        <div class="meta-block">
+          <h4>
+            <span>{{ year }} · Project</span>
+          </h4>
           <h1 class="project-title">{{ title }}</h1>
           <p class="project-tagline">
-            {{ tagline}}
+            <span>{{ tagline}}</span>
           </p>
-          <img src="/img/{{ desktopThumb }}" alt="" class="desktop-thumb">
+        </div>
+        <div id="play-screencast" class="button white type-dark">
+          <i class="icon icon-20 icon-play-b-20"></i>
+          Play Screencast
         </div>
       </div>
-      <div class="page-header-background">
-        <div class="circle center-circle"></div>
-      </div>
-    </div>
+    </section>
     <main class="content project">
-      <div class="inner project-body space-top-small space-bottom">
+      <div class="inner project-body space-bottom">
         {{ content | safe }}
       </div>
     </main>
