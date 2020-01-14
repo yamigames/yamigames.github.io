@@ -80,6 +80,14 @@ html, body {
 		background-color: $black;
 	}
 
+	&.white {
+		background-color: $white;
+		color: $black;
+		&:hover {
+			background-color: darken($white, 10%);
+		}
+	}
+
 	i {
 		margin-right: 4px;
   		vertical-align: middle;

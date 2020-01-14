@@ -2,15 +2,15 @@
 
 .site-footer {
 	position: relative;
-	padding: 24px;
 	overflow: hidden;
 	background-color: $black;
-	// background-color: $green-dark;
 
 	.content {
 		z-index: 2;
-		margin-top: 50px;
-		.footer-img {
+		padding-top: 50px;
+		position: relative;
+		min-height: 380px;
+		.footer-image {
 			width: 388px;
 			height: 388px;
 			background-image: url(/img/footer_image.jpg);
@@ -19,12 +19,33 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
+			z-index: 1;
+			opacity: 0.6;
 		}
+	}
 
-		&::after {
+	.row {
+		display: flex;
+		width: 100%;
+		position: relative;
+		z-index: 10;
+	}
+
+	.footer-text {
+		padding-top: 24px;
+		position: relative;
+		z-index: 10;
+		& > p {
+			text-align: center;
 			display: block;
-			content: "";
-			clear: both;
+			text-shadow: 0px 4px 8px black;
+			&:first-child {
+				font-weight: 600;
+			}
+
+			a {
+				color: white;
+			}
 		}
 	}
 
@@ -34,14 +55,22 @@
 
 	h1 {
 		color: white;
-		margin-bottom: 24px;
+		text-shadow: 0px 1px 8px black;
+	}
+
+	h3 {
+		max-width: 420px;
+		opacity: 0.8;
+		font-weight: 500;
+		text-shadow: 0px 1px 8px black;
 	}
 
 	ul {
+		margin-top: 16px;
 		// text-align: right;
 	}
 
-	ul > li {
+	ul > a {
 		padding: 12px 16px;
 		background-color: $white;
 		font-family: FiraSans-Medium;
@@ -60,16 +89,19 @@
 	}
 
 	.social-footer {
-		width: 50%;
-		float: left;
+		// position: relative;
+		flex: 2;
+		z-index: 10;
 	}
 
 	.footer-intro {
-		margin-top: 16px;
+		// position: relative;
+		// margin-top: 16px;
 		width: 50%;
-		float:left;
+		z-index: 10;
+		flex: 1;
+		display: flex;
 		.avatar {
-			float: left;
 			margin-top: 10px;
 			width: 48px;
 			height: 48px;
@@ -98,8 +130,7 @@
 	}
 
 	.bubble {
-		float: left;
-		width: calc(100% - 64px);
+		width: 320px;
 		background-color: $white;
 		border-radius: 16px;
 		color: $black;
@@ -107,11 +138,14 @@
 		font-size: 16px;
 		letter-spacing: 0;
 		padding: 12px 16px;
+		height: fit-content;
 		@extend .shadow-soft; 
 	}
 
 	footer {
 		text-align: center;
-		padding: 16px;
+		padding: 24px 0 50px 0;
+		display: block;
+		width: 100%;
 	}
 }
