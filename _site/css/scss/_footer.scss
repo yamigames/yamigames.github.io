@@ -10,6 +10,17 @@
 	.content {
 		z-index: 2;
 		margin-top: 50px;
+		.footer-img {
+			width: 388px;
+			height: 388px;
+			background-image: url(/img/footer_image.jpg);
+			background-repeat: no-repeat;
+			background-size: 388px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
 		&::after {
 			display: block;
 			content: "";
