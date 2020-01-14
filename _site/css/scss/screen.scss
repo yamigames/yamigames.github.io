@@ -32,7 +32,11 @@
 // Style
 @import "_style.scss";
 
-html, body {
+html {
+	background-color: black;
+}
+
+body {
 	background-color: #ECEDF1;
 	z-index: 0;
 	width: 100%;
