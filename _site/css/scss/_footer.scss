@@ -10,6 +10,15 @@
 	.content {
 		z-index: 2;
 		margin-top: 50px;
+		&::after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+
+	footer {
+		width: 100%;
 	}
 
 	h1 {
@@ -39,14 +48,15 @@
 		}
 	}
 
+	.social-footer {
+		width: 50%;
+		float: left;
+	}
+
 	.footer-intro {
 		margin-top: 16px;
-		max-width: 520px;
-		&::after {
-			display: block;
-			content: "";
-			clear: both;
-		}
+		width: 50%;
+		float:left;
 		.avatar {
 			float: left;
 			margin-top: 10px;

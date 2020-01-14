@@ -26,6 +26,9 @@
 // Style
 @import "_header.scss";
 
+// Icons
+@import "_icons.scss";
+
 // Style
 @import "_style.scss";
 
@@ -99,63 +102,6 @@ html, body {
 		cursor: pointer;
 		background-color: rgba(255,255,255,0.25);
 	}
-}
-
-// Icons 
-.icon {
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	background-size: 20px 20px;
-	// background-color: #fff;
-	// border-radius: 50%;
-}
-
-.icon-12 {
-	width: 12px;
-	height: 12px;
-	display: inline-block;
-	background-size: 12px 12px;
-}
-
-$close: url(../img/close.png);
-$lines: url(../img/lines.png);
-$lines_12: url(../img/lines_12.png);
-$contact: url(../img/contact.png);
-$mute: url(../img/mute.png);
-$play: url(../img/play.png);
-$up: url(../img/up.png);
-
-$portrait: url(../img/portrait.jpg);
-
-// Thumbs
-$avatarProjectThumb: url(../img/avatar_project_thumb.png);
-
-.icon-lines {
-	background-image: $lines;
-}
-
-.icon-lines-12 {
-	background-image: $lines_12;
-}
-.icon-contact {
-	background-image: $contact;
-}
-
-.icon-close {
-	background-image: $close;
-}
-
-.icon-mute {
-	background-image: $mute;
-}
-
-.icon-play {
-	background-image: $play;
-}
-
-.icon-up {
-	background-image: $up;
 }
 
 //
