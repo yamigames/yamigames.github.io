@@ -25,6 +25,7 @@ $hero-height: 650px;
     position: relative;
     height: 100%;
     z-index: 10;
+    transition: all 0.4s;
   }
 
   h1 {
@@ -75,6 +76,7 @@ $hero-height: 650px;
 .home.content {
   position: relative;
   top: -56px;
+  transition: all 0.4s;
   .card {
     $cardwidth: 300px;
     height: 360px;
@@ -90,7 +92,14 @@ $hero-height: 650px;
     &:hover {
       box-shadow: 0 4px 32px rgba(0,0,0,0.16);
       bottom: 4px;
-      transition: all 0.4s;
+      transition: all 0.4s ease;
+
+      .project-thumb {
+        display: none;
+      }
+      .project-thumb-gif {
+        display: block;
+      }
     }
 
     .info {
@@ -100,6 +109,17 @@ $hero-height: 650px;
       height: 100%;
     }
     .project-thumb {
+      display: block;
+      float: left;
+      width: 580px;
+      // margin: 0 16px;
+      height: 100%;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .project-thumb-gif {
+      display: none;
       float: left;
       width: 580px;
       // margin: 0 16px;
