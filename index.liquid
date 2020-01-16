@@ -1,0 +1,46 @@
+---
+layout: home.liquid
+title: Nate Butler · Product Designer
+---
+
+<section class="home-hero type-dark">
+  <div class="inner">
+    <h1 class="">Something About <br/> Creative Vision</h1>
+    <h3 class="tagline">
+      <span>A tagline explaining something about my particular <br /> flavor of design and how it relates to vision.</span>
+    </h3>
+    <div id="play-showreel" class="button white type-dark">
+      <i class="icon icon-20 icon-play-b-20"></i>
+      Play Showreel
+    </div>
+  </div>
+  <div class="hero-video-wrapper">
+    <video id="hero-video" poster="/video/hero.jpg" autoplay muted loop>
+      <source src="/video/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="home content">
+  <div class="inner">
+    <!-- Project Loop -->
+    {%- assign projects = collections.project | reverse -%}
+    {%- for project in projects -%}
+      <a href="{{ project.url }}">
+        <div class="card project {{ project.data.textcolor }}" 
+            style="background-color: #{{ project.data.themecolor }};">
+          <div class="info">
+            <div class="meta">
+              <p>{{ project.data.year }} · {{ project.data.company }}</p>
+            </div>
+            <h1>{{ project.data.title }}</h1>
+            <p> {{ project.data.tagline }}</p>
+            <!-- <h4>{{ project.data.roles }}</h4> -->
+          </div>
+          <div class="project-thumb" style="background-image: url(/img/{{ project.data.thumb }});"></div>
+          <div class="project-thumb-gif" style="background-image: url(/img/{{ project.data.thumbGIF }});"></div>
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+  {% include siteheader %}
+  <body>
+  	{% include overlay %}
+  	{% include header %}
+    {{ content | safe }}
+    {% include footer %}
+  </body>
+  <script src="js/scripts-min.js"></script>
+</html>
