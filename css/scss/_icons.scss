@@ -30,6 +30,7 @@ $grid-b-12: url(../img/icon-grid-b-12.png);
 $mute-b-12: url(../img/icon-mute-b-12.png);
 $contact-b-12: url(../img/icon-contact-b-12.png);
 $up-b-12: url(../img/icon-up-b-12.png);
+$external-b-12: url(../img/icon-external-b-12.png);
 
 // Black 20
 $logo-b-20: url(../img/icon-logo-b-20.png);
@@ -40,6 +41,7 @@ $grid-b-20: url(../img/icon-grid-b-20.png);
 $mute-b-20: url(../img/icon-mute-b-20.png);
 $contact-b-20: url(../img/icon-contact-b-20.png);
 $up-b-20: url(../img/icon-up-b-20.png);
+$external-b-20: url(../img/icon-external-b-20.png);
 
 // White 12
 $logo-w-12: url(../img/icon-logo-w-12.png);
@@ -50,6 +52,7 @@ $grid-w-12: url(../img/icon-grid-w-12.png);
 $mute-w-12: url(../img/icon-mute-w-12.png);
 $contact-w-12: url(../img/icon-contact-w-12.png);
 $up-w-12: url(../img/icon-up-w-12.png);
+$external-w-12: url(../img/icon-external-w-12.png);
 
 // White 20
 $logo-w-20: url(../img/icon-logo-w-20.png);
@@ -60,6 +63,7 @@ $grid-w-20: url(../img/icon-grid-w-20.png);
 $mute-w-20: url(../img/icon-mute-w-20.png);
 $contact-w-20: url(../img/icon-contact-w-20.png);
 $up-w-20: url(../img/icon-up-w-20.png);
+$external-w-20: url(../img/icon-external-w-20.png);
 
 // Backup
 // TODO: Replace with new icon system
@@ -144,6 +148,10 @@ $avatarProjectThumb: url(../img/avatar_project_thumb.png);
 	background-image: $up-b-12;
 }
 
+.icon-external-b-12 {
+	background-image: $external-b-12;
+}
+
 // Icon Black 20
 .icon-logo-b-20 {
 	background-image: $logo-b-20;
@@ -175,6 +183,10 @@ $avatarProjectThumb: url(../img/avatar_project_thumb.png);
 
 .icon-up-b-20 {
 	background-image: $up-b-20;
+}
+
+.icon-external-b-20 {
+	background-image: $external-b-20;
 }
 
 // Icon White 12
@@ -210,6 +222,10 @@ $avatarProjectThumb: url(../img/avatar_project_thumb.png);
 	background-image: $up-w-12;
 }
 
+.icon-external-w-12 {
+	background-image: $external-w-12;
+}
+
 // Icon White 20
 .icon-logo-w-20 {
 	background-image: $logo-w-20;
@@ -241,4 +257,8 @@ $avatarProjectThumb: url(../img/avatar_project_thumb.png);
 
 .icon-up-w-20 {
 	background-image: $up-w-20;
+}
+
+.icon-external-w-20 {
+	background-image: $external-w-20;
 }

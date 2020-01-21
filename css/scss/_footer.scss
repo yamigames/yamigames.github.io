@@ -73,24 +73,6 @@
 		// text-align: right;
 	}
 
-	ul > a {
-		padding: 12px 16px;
-		background-color: $white;
-		font-family: FiraSans-Medium;
-		font-size: 18px;
-		color: #000000;
-		letter-spacing: 0;
-		line-height: 20px;
-		border-radius: 20px;
-		display: inline-block;
-		margin: 6px 2px;
-		@extend .shadow-soft;
-		&:hover {
-			cursor:pointer;
-			background-color: darken($white, 10%);
-		}
-	}
-
 	.social-footer {
 		// position: relative;
 		flex: 2;

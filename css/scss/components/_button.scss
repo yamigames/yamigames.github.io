@@ -1,0 +1,107 @@
+// Buttons
+
+.button {
+	padding: 12px 16px;
+	line-height: 20px;
+	display: block;
+	transition: transform 0.2s; // Animate button active state
+	border-radius: 26px;
+	font-family: $raleway;
+	font-weight: 900;
+	font-size: 18px;
+	letter-spacing: 0;
+	vertical-align: middle;
+
+	// Prevent text from being selected on buttons
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
+
+	// Button Styles
+	&.icon {
+    	i { vertical-align: middle; }
+	}
+
+	&.text {
+		// Nothing yet
+	}
+
+	&.icon.text {
+		padding: 13px 16px 11px 16px;
+		i { 
+			margin-right: 8px; 
+			position: relative;
+			top: -2px;
+		} // Space between icons and text
+	}
+
+	&.fixed {
+		// Nothing yet
+	}
+
+	// Button Colors
+	&.white {
+		background-color: $white;
+		color: $dark;
+		&:hover { background-color: darken($white, 5%); }
+	}
+
+	&.light {
+		background-color: $light;
+		color: $dark;
+		&:hover { background-color: darken($light, 3%); }
+	}
+
+	&.dark {
+		background-color: $dark;
+		color: $light;
+		&:hover { background-color: lighten($dark, 20%); }
+	}
+
+	&.transparent {
+		background-color: $transparent;
+		color: $white;
+		&:hover { background-color: darken($transparent, 30%); }
+	}
+
+	&.theme-background {
+		color: $light;
+		&:hover { opacity: 0.8; }
+	}
+
+	// Button States
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:active {
+		transform: scale(0.95);
+		transition: transform 0.2s;
+	}
+
+	&:visited {
+		// Nothing so far
+	}
+}
+
+// Rows of buttons
+
+.row {
+	.button {
+		display: inline-block;
+		margin-right: 8px;
+	}
+}
+
+.button-like {
+	transition: transform 0.2s; // Animate button active state
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:active {
+		transform: scale(0.95); // Shring when clicking
+		transition: transform 0.2s;
+	}
+}

@@ -125,7 +125,6 @@ ul {
 }
 
 li {
-	@extend .type-regular;
 	&.list-header {
 		@extend .type-semibold;
 	}
