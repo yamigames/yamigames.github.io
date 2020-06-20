@@ -14,22 +14,24 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
   const hiddenProjects = drop(projectsToDisplay, projects);
 
   return (
-    <Box
-      sx={{
-        ...border({
-          top: true,
-        }),
-      }}
-    >
-      {shownProjects.map(project => (
-        <ProjectEntry key={project.id} {...{ project }} />
+    <Box {...props}>
+      {shownProjects.map((project, index) => (
+        <ProjectEntry
+          key={project.id}
+          sx={{
+            ...border({
+              bottom: index !== shownProjects.length - 1,
+            }),
+          }}
+          {...{ project }}
+        />
       ))}
       {!showMore && (
         <Box
           p={2}
           sx={{
             ...border({
-              bottom: true,
+              top: true,
             }),
           }}
           onClick={() => setShowMore(true)}
@@ -43,14 +45,7 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
 
 const ProjectEntry = ({ project, ...props }) => {
   return (
-    <Box
-      {...props}
-      sx={{
-        ...border({
-          bottom: true,
-        }),
-      }}
-    >
+    <Box {...props}>
       <Link to={`/projects/${project.id}`}>{project.name}</Link>
     </Box>
   );
