@@ -1,13 +1,17 @@
-import React from 'react';
+/** @jsx jsx */
+
+import { Box, jsx } from 'theme-ui';
 import { Spacer } from '../../designSystem/components/Spacer';
 import { Bio } from './Bio';
+import { ProjectList } from './ProjectList';
 
-export const Home = () => {
+export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
   return (
-    <div>
+    <Box {...props}>
       <Bio p={2} />
       <Spacer />
       Selected Work
-    </div>
+      <ProjectList {...{ projects, projectsToDisplay }} />
+    </Box>
   );
 };
