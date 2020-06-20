@@ -13,7 +13,7 @@ export const App = () => (
         sx={{
           display: 'grid',
           gridGap: 4,
-          gridTemplateColumns: ['auto', '1fr 256px'],
+          gridTemplateColumns: ['auto', '256px 1fr'],
         }}
       >
         <Sidebar />
