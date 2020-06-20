@@ -5,6 +5,7 @@ import take from 'ramda/src/take';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Box, jsx } from 'theme-ui';
+import { border } from '../../designSystem';
 
 export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
   const [showMore, setShowMore] = useState(false);
@@ -15,9 +16,9 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
   return (
     <Box
       sx={{
-        borderTop: 'solid',
-        borderWidth: 8,
-        borderColor: 'primary',
+        ...border({
+          top: true,
+        }),
       }}
     >
       {shownProjects.map(project => (
@@ -27,9 +28,9 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
         <Box
           p={2}
           sx={{
-            borderBottom: 'solid',
-            borderWidth: 8,
-            borderColor: 'primary',
+            ...border({
+              bottom: true,
+            }),
           }}
           onClick={() => setShowMore(true)}
         >
@@ -45,9 +46,9 @@ const ProjectEntry = ({ project, ...props }) => {
     <Box
       {...props}
       sx={{
-        borderBottom: 'solid',
-        borderWidth: 8,
-        borderColor: 'primary',
+        ...border({
+          bottom: true,
+        }),
       }}
     >
       <Link to={`/projects/${project.id}`}>{project.name}</Link>

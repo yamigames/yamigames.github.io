@@ -2,6 +2,7 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Box, jsx, ThemeProvider } from 'theme-ui';
+import { border } from '../../designSystem';
 import { theme } from '../theme';
 import { Home } from './Home';
 import { Project } from './Project';
@@ -58,16 +59,16 @@ export const App = () => (
           display: 'grid',
           gridTemplateColumns: ['auto', '33% 1fr'],
           height: '100vh',
-          border: 'solid',
-          borderWidth: 8,
-          borderColor: 'primary',
+          ...border({
+            all: true,
+          }),
         }}
       >
         <Sidebar
           sx={{
-            borderRight: 'solid',
-            borderWidth: 8,
-            borderColor: 'primary',
+            ...border({
+              right: true,
+            }),
           }}
         />
         <Box

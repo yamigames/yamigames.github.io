@@ -1,15 +1,16 @@
 /** @jsx jsx */
 
 import { Box, jsx } from 'theme-ui';
+import { border } from '../';
 
 export const Spacer = ({ ...props }) => (
   <Box
     {...props}
     sx={{
-      borderTop: 'solid',
-      borderBottom: 'solid',
-      borderWidth: 8,
-      borderColor: 'primary',
+      ...border({
+        top: true,
+        bottom: true,
+      }),
       background: ({ colors }) => `
         repeating-linear-gradient(
           -45deg,
