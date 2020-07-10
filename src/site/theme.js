@@ -1,4 +1,4 @@
-export const PRIMARY = 'royalblue';
+export const PRIMARY = '#2f80ed';
 
 const headingFontStack = `'Fira Sans', sans-serif`;
 
