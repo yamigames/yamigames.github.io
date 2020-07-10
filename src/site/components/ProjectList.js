@@ -54,7 +54,7 @@ const ProjectEntry = ({ project, ...props }) => {
             textDecoration: 'none',
           }}
         >
-          {project.name}
+          {project.name}.
         </Link>
       </Heading>
     </Box>
