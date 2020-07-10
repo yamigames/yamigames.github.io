@@ -4,8 +4,9 @@ import drop from 'ramda/src/drop';
 import take from 'ramda/src/take';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Heading, jsx } from 'theme-ui';
+import { Box, Flex, Heading, jsx, Text } from 'theme-ui';
 import { border } from '../../designSystem';
+import { Icon } from '../../designSystem/components/Icon';
 
 export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
   const [showMore, setShowMore] = useState(false);
@@ -45,19 +46,31 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
 
 const ProjectEntry = ({ project, ...props }) => {
   return (
-    <Box {...props}>
-      <Heading variant="h3">
-        <Link
-          to={`/projects/${project.id}`}
+    <Flex {...props}>
+      <Box sx={{ flex: '1 1 auto' }}>
+        <Heading variant="h3">
+          <Link
+            to={`/projects/${project.id}`}
+            sx={{
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            {project.name}.
+          </Link>
+        </Heading>
+      </Box>
+      <Box>
+        <Flex
           sx={{
-            color: 'inherit',
-            textDecoration: 'none',
+            alignItems: 'center',
           }}
         >
-          {project.name}.
-        </Link>
-      </Heading>
-    </Box>
+          <Text variant="h3">{project.duration}</Text>
+          <Icon.RightChevron ml={4} />
+        </Flex>
+      </Box>
+    </Flex>
   );
 };
 

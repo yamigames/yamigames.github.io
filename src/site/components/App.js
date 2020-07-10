@@ -12,42 +12,52 @@ const projects = [
   {
     id: 'xdesign-system',
     name: 'xDesign System',
+    duration: '2020'
   },
   {
     id: 'avatars-for-two-billion',
     name: 'Avatars for Two Billion',
+    duration: '2018'
   },
   {
     id: 'sharing-expression',
     name: 'Sharing Expression',
+    duration: '2017'
   },
   {
     id: 'fb-design-wallpapers',
     name: 'fb.design Wallpapers',
+    duration: '2017'
   },
   {
     id: '30-days-2-years',
     name: '30 days/2 Years',
+    duration: '2017'
   },
   {
     id: 'the-intermission',
     name: 'The Intermission',
+    duration: '2016'
   },
   {
     id: 'facebook-developers',
     name: 'Facebook Developers',
+    duration: '2015'
   },
   {
     id: 'format-custom-pages',
     name: 'Format Custom Pages',
+    duration: '2014'
   },
   {
     id: 'social-fashion-with-lookbook',
     name: 'Social Fashion with LOOKBOOK',
+    duration: '2012'
   },
   {
     id: 'design-and-print',
     name: 'Design & Print',
+    duration: '2011-2016'
   },
 ];
 
