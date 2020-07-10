@@ -54,7 +54,7 @@ const projects = [
 export const App = () => (
   <ThemeProvider {...{ theme }}>
     <Router>
-      <div
+      <Box
         sx={{
           display: 'grid',
           gridTemplateColumns: ['auto', '33% 1fr'],
@@ -87,7 +87,7 @@ export const App = () => (
             ))}
           </Switch>
         </Box>
-      </div>
+      </Box>
     </Router>
   </ThemeProvider>
 );
