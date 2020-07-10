@@ -4,7 +4,7 @@ import drop from 'ramda/src/drop';
 import take from 'ramda/src/take';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Box, jsx } from 'theme-ui';
+import { Box, Heading, jsx } from 'theme-ui';
 import { border } from '../../designSystem';
 
 export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
@@ -28,7 +28,7 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
       ))}
       {!showMore && (
         <Box
-          p={2}
+          p={4}
           sx={{
             ...border({
               top: true,
@@ -36,7 +36,7 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
           }}
           onClick={() => setShowMore(true)}
         >
-          See {hiddenProjects.length} More
+          <Heading variant="h3">See {hiddenProjects.length} More</Heading>
         </Box>
       )}
     </Box>
@@ -46,11 +46,21 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
 const ProjectEntry = ({ project, ...props }) => {
   return (
     <Box {...props}>
-      <Link to={`/projects/${project.id}`}>{project.name}</Link>
+      <Heading variant="h3">
+        <Link
+          to={`/projects/${project.id}`}
+          sx={{
+            color: 'inherit',
+            textDecoration: 'none',
+          }}
+        >
+          {project.name}
+        </Link>
+      </Heading>
     </Box>
   );
 };
 
 ProjectEntry.defaultProps = {
-  p: 2,
+  p: 4,
 };
