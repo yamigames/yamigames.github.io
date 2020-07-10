@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { Box, jsx } from 'theme-ui';
+import { Box, Heading, jsx } from 'theme-ui';
 import { border } from '../../designSystem';
 import { Spacer } from '../../designSystem/components/Spacer';
 import { Bio } from './Bio';
@@ -11,7 +11,9 @@ export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
     <Box {...props}>
       <Bio p={2} />
       <Spacer />
-      Selected Work
+      <Heading variant="h2" p={4}>
+        Selected Work
+      </Heading>
       <ProjectList
         sx={{
           ...border({
