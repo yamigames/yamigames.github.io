@@ -23,6 +23,9 @@ export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
         {...{ projects, projectsToDisplay }}
       />
       <Spacer />
+      <Heading variant="h2" p={4}>
+        Find Me Elsewhere
+      </Heading>
     </Box>
   );
 };
