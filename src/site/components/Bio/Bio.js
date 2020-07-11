@@ -1,6 +1,7 @@
 /** @jsx jsx */
 
 import { Avatar, Box, Flex, Heading, jsx, Text } from 'theme-ui';
+import profileImage from './profile.jpg';
 
 export const Bio = ({ ...props }) => (
   <Flex {...props}>
@@ -36,11 +37,7 @@ export const Bio = ({ ...props }) => (
           },
         }}
       >
-        <Avatar
-          src="https://pbs.twimg.com/profile_images/1136268289707991040/LgGISM7w_400x400.jpg"
-          width={196}
-          height={196}
-        />
+        <Avatar src={profileImage} width={196} height={196} />
       </Box>
     </Box>
   </Flex>
