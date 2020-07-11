@@ -77,7 +77,7 @@ export const App = () => (
         <Sidebar
           sx={{
             ...border({
-              right: true,
+              right: [null, true],
             }),
           }}
         />
