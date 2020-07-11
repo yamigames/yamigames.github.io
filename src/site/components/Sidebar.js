@@ -5,6 +5,6 @@ import { Inset } from '../../designSystem/components/Inset';
 
 export const Sidebar = ({ ...props }) => (
   <Inset {...props}>
-    <Heading variant="h3">Nate Butler</Heading>
+    <Heading variant="h1">Nate Butler</Heading>
   </Inset>
 );
