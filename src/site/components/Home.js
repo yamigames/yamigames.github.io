@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import range from 'ramda/src/range';
-import { Box, Flex, Heading, jsx, Text } from 'theme-ui';
+import { Box, Flex, Grid, Heading, jsx, Text } from 'theme-ui';
 import { border } from '../../designSystem';
 import { Spacer } from '../../designSystem/components/Spacer';
 import { BackToTopButton } from './BackToTopButton';
@@ -17,6 +17,40 @@ const placeholderTweets = range(1, 10).map(id => ({
   },
   text: `I'm always surprised when people's process is straightforward and organized. Mine always looks like a hurricane 🌪`,
 }));
+
+const mediaLinks = [
+  {
+    title: `Make a Facebook avatar for chat, Instagram, Twitter and more. Here's how`,
+    year: 2020,
+    publication: 'CNET',
+  },
+  {
+    title:
+      'You can now have your very own digital avatar on Facebook and Messenger',
+    year: 2020,
+    publication: 'USA Today',
+  },
+  {
+    title: `Facebook's Design Team Releases Abstract, iOS 11-Inspired iPhone Wallpapers`,
+    year: 2018,
+    publication: 'Design Taxi',
+  },
+  {
+    title: `Facebook's Design Team Releases Abstract, iOS 11-Inspired iPhone Wallpapers`,
+    year: 2017,
+    publication: 'The Verge',
+  },
+  {
+    title: 'Facebook encourages text statuses with new colored backgrounds',
+    year: 2016,
+    publication: 'Techcrunch',
+  },
+  {
+    title: 'Facebook encourages text statuses with new colored backgrounds',
+    year: 2016,
+    publication: 'USA Today',
+  },
+];
 
 export const Home = ({
   projects = [],
@@ -91,6 +125,18 @@ export const Home = ({
       </Box>
       <SocialLinks links={contactLinks} />
     </Flex>
+    <Box p={4}>
+      <Heading variant="h3">In Media.</Heading>
+      <Box>
+        {mediaLinks.map(link => (
+          <Grid columns="3fr 1fr 1fr" py={2}>
+            <Box>{link.title}</Box>
+            <Box>{link.year}</Box>
+            <Box>{link.publication}</Box>
+          </Grid>
+        ))}
+      </Box>
+    </Box>
     <Spacer
       p={6}
       pr={4}
