@@ -20,10 +20,10 @@ export const border = ({ top, right, bottom, left, all }) => {
   });
 
   return {
-    ...responsive('borderTop')(all || top),
-    ...responsive('borderRight')(all || right),
-    ...responsive('borderBottom')(all || bottom),
-    ...responsive('borderLeft')(all || left),
+    ...responsive('borderTopStyle')(all || top),
+    ...responsive('borderRightStyle')(all || right),
+    ...responsive('borderBottomStyle')(all || bottom),
+    ...responsive('borderLeftStyle')(all || left),
     borderWidth: 8,
     borderColor: 'primary',
   };
