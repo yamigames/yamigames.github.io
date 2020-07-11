@@ -137,9 +137,7 @@ export const Home = ({
         ))}
       </Box>
     </Box>
-    <Spacer
-      p={6}
-      pr={4}
+    <Spacer.Large
       sx={{
         display: 'flex',
         borderBottomStyle: 'none',
@@ -147,6 +145,6 @@ export const Home = ({
       }}
     >
       <BackToTopButton>Back to Top</BackToTopButton>
-    </Spacer>
+    </Spacer.Large>
   </Box>
 );
