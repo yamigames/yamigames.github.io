@@ -3,16 +3,12 @@
 import { jsx, useThemeUI } from 'theme-ui';
 import { Icon } from './Icon';
 
-export const DownChevron = ({ ...props }) => {
+export const Play = ({ ...props }) => {
   const { theme } = useThemeUI();
 
   return (
     <Icon {...props}>
-      <path
-        d="M2.322 7.578l9.778 8.8 9.778-8.8"
-        stroke={theme.colors.primary}
-        strokeWidth="6"
-      />
+      <path d="M5 23.5V.5l15 11.767L5 23.5z" fill={theme.colors.primary} />
     </Icon>
   );
 };

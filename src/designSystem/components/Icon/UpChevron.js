@@ -9,9 +9,10 @@ export const UpChevron = ({ ...props }) => {
   return (
     <Icon {...props}>
       <path
-        d="M1 20 L16 6 L31 20 L27 24 L16 14 L5 24 z"
-        fill={theme.colors.primary}
-      ></path>
+        d="M21.878 16.378l-9.778-8.8-9.778 8.8"
+        stroke={theme.colors.primary}
+        strokeWidth="6"
+      />
     </Icon>
   );
 };
