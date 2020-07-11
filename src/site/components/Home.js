@@ -44,7 +44,14 @@ export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
       >
         Feed
       </Heading>
-      <TwitterFeed tweets={placeholderTweets} />
+      <TwitterFeed
+        sx={{
+          ...border({
+            bottom: true,
+          }),
+        }}
+        tweets={placeholderTweets}
+      />
       <Heading variant="h2" p={4}>
         Find Me Elsewhere
       </Heading>
