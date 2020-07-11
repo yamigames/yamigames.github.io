@@ -1,10 +1,20 @@
 /** @jsx jsx */
 
+import range from 'ramda/src/range';
 import { Box, Heading, jsx } from 'theme-ui';
 import { border } from '../../designSystem';
 import { Spacer } from '../../designSystem/components/Spacer';
 import { Bio } from './Bio';
 import { ProjectList } from './ProjectList';
+import { TwitterFeed } from './TwitterFeed';
+
+const placeholderTweets = range(1, 10).map(id => ({
+  id: `${id}`,
+  author: {
+    username: 'iamnbutler',
+  },
+  text: `I'm always surprised when people's process is straightforward and organized. Mine always looks like a hurricane 🌪`,
+}));
 
 export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
   return (
@@ -23,6 +33,18 @@ export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
         {...{ projects, projectsToDisplay }}
       />
       <Spacer />
+      <Heading
+        variant="h2"
+        p={4}
+        sx={{
+          ...border({
+            bottom: true,
+          }),
+        }}
+      >
+        Feed
+      </Heading>
+      <TwitterFeed tweets={placeholderTweets} />
       <Heading variant="h2" p={4}>
         Find Me Elsewhere
       </Heading>
