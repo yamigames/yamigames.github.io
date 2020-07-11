@@ -2,11 +2,11 @@
 
 import { Box, Heading, jsx } from 'theme-ui';
 import { border } from '../../designSystem';
+import { Inset } from '../../designSystem/components/Inset';
 
 export const ProjectPage = ({ project, children, ...props }) => (
   <Box {...props}>
-    <Box
-      p={4}
+    <Inset
       sx={{
         ...border({
           bottom: true,
@@ -14,7 +14,7 @@ export const ProjectPage = ({ project, children, ...props }) => (
       }}
     >
       <Heading variant="h3">{project.name}</Heading>
-    </Box>
-    <Box p={4}>{children}</Box>
+    </Inset>
+    <Inset>{children}</Inset>
   </Box>
 );

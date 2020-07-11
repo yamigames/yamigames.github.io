@@ -3,6 +3,7 @@
 import range from 'ramda/src/range';
 import { Box, Flex, Grid, Heading, jsx, Text } from 'theme-ui';
 import { border } from '../../designSystem';
+import { Inset } from '../../designSystem/components/Inset';
 import { Spacer } from '../../designSystem/components/Spacer';
 import { BackToTopButton } from './BackToTopButton';
 import { Bio } from './Bio';
@@ -60,11 +61,13 @@ export const Home = ({
   ...props
 }) => (
   <Box {...props}>
-    <Bio p={4} />
+    <Inset>
+      <Bio />
+    </Inset>
     <Spacer />
-    <Heading variant="h2" p={4}>
-      Selected Work
-    </Heading>
+    <Inset>
+      <Heading variant="h2">Selected Work</Heading>
+    </Inset>
     <ProjectList
       sx={{
         ...border({
@@ -74,17 +77,15 @@ export const Home = ({
       {...{ projects, projectsToDisplay }}
     />
     <Spacer />
-    <Heading
-      variant="h2"
-      p={4}
+    <Inset
       sx={{
         ...border({
           bottom: true,
         }),
       }}
     >
-      Feed
-    </Heading>
+      <Heading variant="h2">Feed</Heading>
+    </Inset>
     <TwitterFeed
       sx={{
         ...border({
@@ -93,39 +94,41 @@ export const Home = ({
       }}
       tweets={placeholderTweets}
     />
-    <Heading
-      variant="h2"
-      p={4}
+    <Inset
       sx={{
         ...border({
           bottom: true,
         }),
       }}
     >
-      Find Me Elsewhere
-    </Heading>
-    <Flex p={4}>
-      <Box>
-        <Text>
-          I can be pretty intermittent on social media, but feel free to give me
-          a follow and I'll try to say hi!
-        </Text>
-      </Box>
-      <SocialLinks links={socialLinks} />
-    </Flex>
-    <Flex p={4}>
-      <Box>
-        <Heading variant="h3" mb={4}>
-          Get In Touch.
-        </Heading>
-        <Text>
-          I'm currently working on Internal Tools @ Facebook, but if you want to
-          get in touch feel free to reach out.
-        </Text>
-      </Box>
-      <SocialLinks links={contactLinks} />
-    </Flex>
-    <Box p={4}>
+      <Heading variant="h2">Find Me Elsewhere</Heading>
+    </Inset>
+    <Inset>
+      <Flex>
+        <Box>
+          <Text>
+            I can be pretty intermittent on social media, but feel free to give
+            me a follow and I'll try to say hi!
+          </Text>
+        </Box>
+        <SocialLinks links={socialLinks} />
+      </Flex>
+    </Inset>
+    <Inset>
+      <Flex>
+        <Box>
+          <Heading variant="h3" mb={4}>
+            Get In Touch.
+          </Heading>
+          <Text>
+            I'm currently working on Internal Tools @ Facebook, but if you want
+            to get in touch feel free to reach out.
+          </Text>
+        </Box>
+        <SocialLinks links={contactLinks} />
+      </Flex>
+    </Inset>
+    <Inset>
       <Heading variant="h3">In Media.</Heading>
       <Box>
         {mediaLinks.map((link, index) => (
@@ -136,7 +139,7 @@ export const Home = ({
           </Grid>
         ))}
       </Box>
-    </Box>
+    </Inset>
     <Spacer.Large
       sx={{
         display: 'flex',

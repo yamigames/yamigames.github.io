@@ -1,13 +1,10 @@
 /** @jsx jsx */
 
-import { Box, Heading, jsx } from 'theme-ui';
+import { Heading, jsx } from 'theme-ui';
+import { Inset } from '../../designSystem/components/Inset';
 
 export const Sidebar = ({ ...props }) => (
-  <Box {...props}>
+  <Inset {...props}>
     <Heading variant="h3">Nate Butler</Heading>
-  </Box>
+  </Inset>
 );
-
-Sidebar.defaultProps = {
-  p: 1,
-};

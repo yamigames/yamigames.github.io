@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { Box, Flex, Heading, jsx, Text } from 'theme-ui';
 import { border } from '../../designSystem';
 import { Icon } from '../../designSystem/components/Icon';
+import { Inset } from '../../designSystem/components/Inset';
 
 const projectEntryHover = () => ({
   '&:hover': {
@@ -36,24 +37,28 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
         />
       ))}
       {!showMore && (
-        <Flex
-          p={4}
+        <Inset
           sx={{
             ...border({
               top: true,
             }),
             ...projectEntryHover(),
-            alignItems: 'center',
           }}
-          onClick={() => setShowMore(true)}
         >
-          <Box sx={{ flex: '1 1 auto' }}>
-            <Heading variant="h3">See {hiddenProjects.length} More</Heading>
-          </Box>
-          <Box>
-            <Icon.DownChevron />
-          </Box>
-        </Flex>
+          <Flex
+            sx={{
+              alignItems: 'center',
+            }}
+            onClick={() => setShowMore(true)}
+          >
+            <Box sx={{ flex: '1 1 auto' }}>
+              <Heading variant="h3">See {hiddenProjects.length} More</Heading>
+            </Box>
+            <Box>
+              <Icon.DownChevron />
+            </Box>
+          </Flex>
+        </Inset>
       )}
     </Box>
   );
@@ -67,29 +72,27 @@ const ProjectEntry = ({ project, ...props }) => (
       textDecoration: 'none',
     }}
   >
-    <Flex
+    <Inset
       {...props}
       sx={{
         ...projectEntryHover(),
       }}
     >
-      <Box sx={{ flex: '1 1 auto' }}>
-        <Heading variant="h3">{project.name}.</Heading>
-      </Box>
-      <Box>
-        <Flex
-          sx={{
-            alignItems: 'center',
-          }}
-        >
-          <Text variant="h3">{project.duration}</Text>
-          <Icon.RightChevron ml={4} />
-        </Flex>
-      </Box>
-    </Flex>
+      <Flex>
+        <Box sx={{ flex: '1 1 auto' }}>
+          <Heading variant="h3">{project.name}.</Heading>
+        </Box>
+        <Box>
+          <Flex
+            sx={{
+              alignItems: 'center',
+            }}
+          >
+            <Text variant="h3">{project.duration}</Text>
+            <Icon.RightChevron ml={4} />
+          </Flex>
+        </Box>
+      </Flex>
+    </Inset>
   </Link>
 );
-
-ProjectEntry.defaultProps = {
-  p: 4,
-};

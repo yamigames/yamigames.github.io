@@ -1,28 +1,27 @@
 /** @jsx jsx */
 
 import { Flex, jsx } from 'theme-ui';
+import { Inset } from '../../designSystem/components/Inset';
 import { Tweet } from './Tweet';
 
 export const TwitterFeed = ({ tweets = [], ...props }) => (
-  <Flex
+  <Inset
     {...props}
     sx={{
       overflowX: 'auto',
     }}
   >
-    {tweets.map(tweet => (
-      <Tweet
-        key={tweet.id}
-        mr={4}
-        sx={{
-          flex: '1 0 50%',
-        }}
-        {...{ tweet }}
-      />
-    ))}
-  </Flex>
+    <Flex>
+      {tweets.map(tweet => (
+        <Inset
+          key={tweet.id}
+          sx={{
+            flex: '1 0 50%',
+          }}
+        >
+          <Tweet {...{ tweet }} />
+        </Inset>
+      ))}
+    </Flex>
+  </Inset>
 );
-
-TwitterFeed.defaultProps = {
-  p: 4,
-};

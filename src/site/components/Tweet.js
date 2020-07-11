@@ -3,9 +3,10 @@
 import { Box, jsx, Text } from 'theme-ui';
 import { border } from '../../designSystem';
 import { Icon } from '../../designSystem/components/Icon';
+import { Inset } from '../../designSystem/components/Inset';
 
 export const Tweet = ({ tweet, ...props }) => (
-  <Box
+  <Inset
     {...props}
     sx={{
       position: 'relative',
@@ -13,7 +14,6 @@ export const Tweet = ({ tweet, ...props }) => (
         all: true,
       }),
     }}
-    p={4}
   >
     <Box
       sx={{
@@ -47,5 +47,5 @@ export const Tweet = ({ tweet, ...props }) => (
       {tweet.author.username}
     </Box>
     <Text>{tweet.text}</Text>
-  </Box>
+  </Inset>
 );
