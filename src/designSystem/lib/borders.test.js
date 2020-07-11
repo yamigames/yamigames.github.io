@@ -13,10 +13,10 @@ describe('border', () => {
       all: true,
     });
 
-    expect(typeof actual.borderTop).toBe('string');
-    expect(typeof actual.borderRight).toBe('string');
-    expect(typeof actual.borderBottom).toBe('string');
-    expect(typeof actual.borderLeft).toBe('string');
+    expect(actual.borderTop).toBe('solid');
+    expect(actual.borderRight).toBe('solid');
+    expect(actual.borderBottom).toBe('solid');
+    expect(actual.borderLeft).toBe('solid');
   });
 
   it('sets just `borderTop` when `top` is `true`', () => {
@@ -24,7 +24,7 @@ describe('border', () => {
       top: true,
     });
 
-    expect(typeof actual.borderTop).toBe('string');
+    expect(actual.borderTop).toBe('solid');
     expect(actual.borderRight).toBeUndefined();
     expect(actual.borderBottom).toBeUndefined();
     expect(actual.borderLeft).toBeUndefined();
@@ -36,7 +36,7 @@ describe('border', () => {
     });
 
     expect(actual.borderTop).toBeUndefined();
-    expect(typeof actual.borderRight).toBe('string');
+    expect(actual.borderRight).toBe('solid');
     expect(actual.borderBottom).toBeUndefined();
     expect(actual.borderLeft).toBeUndefined();
   });
@@ -48,7 +48,7 @@ describe('border', () => {
 
     expect(actual.borderTop).toBeUndefined();
     expect(actual.borderRight).toBeUndefined();
-    expect(typeof actual.borderBottom).toBe('string');
+    expect(actual.borderBottom).toBe('solid');
     expect(actual.borderLeft).toBeUndefined();
   });
 
@@ -60,6 +60,65 @@ describe('border', () => {
     expect(actual.borderTop).toBeUndefined();
     expect(actual.borderRight).toBeUndefined();
     expect(actual.borderBottom).toBeUndefined();
-    expect(typeof actual.borderLeft).toBe('string');
+    expect(actual.borderLeft).toBe('solid');
+  });
+
+  it('supports responsive values for `all`', () => {
+    const actual = border({
+      all: [null, false, true],
+    });
+
+    ['borderTop', 'borderRight', 'borderBottom', 'borderLeft'].forEach(
+      property => {
+        expect(Array.isArray(actual[property])).toBe(true);
+        expect(actual[property][0]).toBeNull();
+        expect(actual[property][1]).toBe('none');
+        expect(actual[property][2]).toBe('solid');
+      }
+    );
+  });
+
+  it('supports response values for `top`', () => {
+    const actual = border({
+      top: [null, false, true],
+    });
+
+    expect(Array.isArray(actual.borderTop)).toBe(true);
+    expect(actual.borderTop[0]).toBeNull();
+    expect(actual.borderTop[1]).toBe('none');
+    expect(actual.borderTop[2]).toBe('solid');
+  });
+
+  it('supports response values for `right`', () => {
+    const actual = border({
+      right: [null, false, true],
+    });
+
+    expect(Array.isArray(actual.borderRight)).toBe(true);
+    expect(actual.borderRight[0]).toBeNull();
+    expect(actual.borderRight[1]).toBe('none');
+    expect(actual.borderRight[2]).toBe('solid');
+  });
+
+  it('supports response values for `bottom`', () => {
+    const actual = border({
+      bottom: [null, false, true],
+    });
+
+    expect(Array.isArray(actual.borderBottom)).toBe(true);
+    expect(actual.borderBottom[0]).toBeNull();
+    expect(actual.borderBottom[1]).toBe('none');
+    expect(actual.borderBottom[2]).toBe('solid');
+  });
+
+  it('supports response values for `left`', () => {
+    const actual = border({
+      left: [null, false, true],
+    });
+
+    expect(Array.isArray(actual.borderLeft)).toBe(true);
+    expect(actual.borderLeft[0]).toBeNull();
+    expect(actual.borderLeft[1]).toBe('none');
+    expect(actual.borderLeft[2]).toBe('solid');
   });
 });
