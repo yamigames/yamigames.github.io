@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Box, jsx, ThemeProvider } from 'theme-ui';
 import { border } from '../../designSystem';
-import { projects, socialLinks } from '../config';
+import { contactLinks, projects, socialLinks } from '../config';
 import { theme } from '../theme';
 import { SCROLL_CONTAINER } from './BackToTopButton';
 import { Home } from './Home';
@@ -42,7 +42,7 @@ export const App = () => (
               <Home
                 projects={projects.map(({ project }) => project)}
                 projectsToDisplay={5}
-                {...{ socialLinks }}
+                {...{ socialLinks, contactLinks }}
               />
             </Route>
             {projects.map(({ project, ProjectPage }) => (

@@ -24,6 +24,17 @@ export const socialLinks = [
   },
 ];
 
+export const contactLinks = [
+  {
+    service: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/imnate/',
+  },
+  {
+    service: 'Email',
+    url: 'mailto:iamnbutler@gmail.com',
+  },
+];
+
 export const projects = [
   {
     project: {

@@ -21,6 +21,7 @@ const placeholderTweets = range(1, 10).map(id => ({
 export const Home = ({
   projects = [],
   socialLinks = [],
+  contactLinks = [],
   projectsToDisplay,
   ...props
 }) => {
@@ -59,7 +60,15 @@ export const Home = ({
         }}
         tweets={placeholderTweets}
       />
-      <Heading variant="h2" p={4}>
+      <Heading
+        variant="h2"
+        p={4}
+        sx={{
+          ...border({
+            bottom: true,
+          }),
+        }}
+      >
         Find Me Elsewhere
       </Heading>
       <Flex p={4}>
@@ -70,6 +79,18 @@ export const Home = ({
           </Text>
         </Box>
         <SocialLinks links={socialLinks} />
+      </Flex>
+      <Flex p={4}>
+        <Box>
+          <Heading variant="h3" mb={4}>
+            Get In Touch.
+          </Heading>
+          <Text>
+            I'm currently working on Internal Tools @ Facebook, but if you want
+            to get in touch feel free to reach out.
+          </Text>
+        </Box>
+        <SocialLinks links={contactLinks} />
       </Flex>
       <Spacer
         p={6}
