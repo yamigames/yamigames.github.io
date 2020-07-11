@@ -125,6 +125,7 @@ export const App = () => (
           sx={{
             ...border({
               right: [null, true],
+              bottom: [true, null],
             }),
           }}
         />
