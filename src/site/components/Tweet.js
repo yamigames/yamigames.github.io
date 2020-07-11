@@ -25,7 +25,7 @@ export const Tweet = ({ tweet, ...props }) => (
         position: 'absolute',
         top: '-24px',
         left: '-24px',
-        backgroundColor: 'white',
+        backgroundColor: 'background',
       }}
     >
       <Icon.Twitter />

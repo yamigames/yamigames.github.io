@@ -94,7 +94,7 @@ export const theme = {
   buttons: {
     primary: {
       fontFamily: 'heading',
-      backgroundColor: 'white',
+      backgroundColor: 'background',
       color: 'text',
       borderRadius: 0,
     },
