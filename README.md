@@ -1,5 +1,11 @@
 # yaminateo.com
 
+## Development
+
+Run `yarn start` to start up the development server.
+
+Run `yarn storybook` to start up the [Storybook](https://storybook.js.org/) server.
+
 ## Deploying
 
 Run `yarn deploy` to deploy the site to GitHub Pages.
