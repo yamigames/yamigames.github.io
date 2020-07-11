@@ -128,8 +128,8 @@ export const Home = ({
     <Box p={4}>
       <Heading variant="h3">In Media.</Heading>
       <Box>
-        {mediaLinks.map(link => (
-          <Grid columns="3fr 1fr 1fr" py={2}>
+        {mediaLinks.map((link, index) => (
+          <Grid key={index} columns="3fr 1fr 1fr" py={2}>
             <Box>{link.title}</Box>
             <Box>{link.year}</Box>
             <Box>{link.publication}</Box>
