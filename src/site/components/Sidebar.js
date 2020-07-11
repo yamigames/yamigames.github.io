@@ -1,5 +1,6 @@
-import React from 'react';
-import { Box, Heading } from 'theme-ui';
+/** @jsx jsx */
+
+import { Box, Heading, jsx } from 'theme-ui';
 
 export const Sidebar = ({ ...props }) => {
   return (
