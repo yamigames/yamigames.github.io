@@ -51,6 +51,16 @@ export const theme = {
     text: PRIMARY,
     background: 'white',
     primary: PRIMARY,
+    modes: {
+      dark: {
+        background: 'black',
+      },
+      inverted: {
+        text: 'white',
+        background: PRIMARY,
+        primary: 'white',
+      },
+    },
   },
   styles: {
     root: {
