@@ -16,19 +16,27 @@ export const Tweet = ({ tweet, ...props }) => (
     p={4}
   >
     <Box
-      p={1}
       sx={{
         ...border({
           all: true,
         }),
-        borderRadius: 36,
+        borderRadius: 9999,
         position: 'absolute',
-        top: '-24px',
-        left: '-24px',
+        top: -32,
+        left: -32,
+        width: 64,
+        height: 64,
+        textAlign: 'center',
         backgroundColor: 'background',
       }}
     >
-      <Icon.Twitter />
+      <Icon.Twitter
+        sx={{
+          position: 'absolute',
+          top: 12,
+          left: 12,
+        }}
+      />
     </Box>
     <Box
       mb={1}
