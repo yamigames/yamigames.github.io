@@ -20,7 +20,7 @@ const placeholderTweets = range(1, 10).map(id => ({
 export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
   return (
     <Box {...props}>
-      <Bio p={2} />
+      <Bio p={4} />
       <Spacer />
       <Heading variant="h2" p={4}>
         Selected Work
