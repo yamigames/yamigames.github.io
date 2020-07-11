@@ -3,10 +3,10 @@
 import { Heading, jsx } from 'theme-ui';
 import { ProjectPage } from '../components/ProjectPage';
 
-const FbDesignWallpapersPage = () => (
-  <ProjectPage title="fb.design Wallpapers">
+const FbDesignWallpapers = ({ ...props }) => (
+  <ProjectPage {...props}>
     <Heading variant="h3">Overview</Heading>
   </ProjectPage>
 );
 
-export default FbDesignWallpapersPage;
+export default FbDesignWallpapers;

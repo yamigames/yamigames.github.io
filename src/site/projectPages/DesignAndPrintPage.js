@@ -3,10 +3,10 @@
 import { Heading, jsx } from 'theme-ui';
 import { ProjectPage } from '../components/ProjectPage';
 
-const DesignAndPrintPage = () => (
-  <ProjectPage title="Design & Print">
+const DesignAndPrint = ({ ...props }) => (
+  <ProjectPage {...props}>
     <Heading variant="h3">Overview</Heading>
   </ProjectPage>
 );
 
-export default DesignAndPrintPage;
+export default DesignAndPrint;

@@ -3,7 +3,7 @@
 import { Box, Heading, jsx } from 'theme-ui';
 import { border } from '../../designSystem';
 
-export const ProjectPage = ({ title, children, ...props }) => (
+export const ProjectPage = ({ project, children, ...props }) => (
   <Box {...props}>
     <Box
       p={4}
@@ -13,7 +13,7 @@ export const ProjectPage = ({ title, children, ...props }) => (
         }),
       }}
     >
-      <Heading variant="h3">{title}</Heading>
+      <Heading variant="h3">{project.name}</Heading>
     </Box>
     <Box p={4}>{children}</Box>
   </Box>

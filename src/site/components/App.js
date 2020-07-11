@@ -11,78 +11,100 @@ import { Sidebar } from './Sidebar';
 
 const projects = [
   {
-    id: 'xdesign-system',
-    name: 'xDesign System',
-    duration: '2020',
-    component: React.lazy(() => import('../projectPages/XDesignSystemPage')),
+    project: {
+      id: 'xdesign-system',
+      name: 'xDesign System',
+      duration: '2020',
+    },
+    ProjectPage: React.lazy(() => import('../projectPages/XDesignSystemPage')),
   },
   {
-    id: 'avatars-for-two-billion',
-    name: 'Avatars for Two Billion',
-    duration: '2018',
-    component: React.lazy(() =>
+    project: {
+      id: 'avatars-for-two-billion',
+      name: 'Avatars for Two Billion',
+      duration: '2018',
+    },
+    ProjectPage: React.lazy(() =>
       import('../projectPages/AvatarsForTwoBillionPage')
     ),
   },
   {
-    id: 'sharing-expression',
-    name: 'Sharing Expression',
-    duration: '2017',
-    component: React.lazy(() =>
+    project: {
+      id: 'sharing-expression',
+      name: 'Sharing Expression',
+      duration: '2017',
+    },
+    ProjectPage: React.lazy(() =>
       import('../projectPages/SharingExpressionPage')
     ),
   },
   {
-    id: 'fb-design-wallpapers',
-    name: 'fb.design Wallpapers',
-    duration: '2017',
-    component: React.lazy(() =>
+    project: {
+      id: 'fb-design-wallpapers',
+      name: 'fb.design Wallpapers',
+      duration: '2017',
+    },
+    ProjectPage: React.lazy(() =>
       import('../projectPages/FbDesignWallpapersPage')
     ),
   },
   {
-    id: '30-days-2-years',
-    name: '30 days/2 Years',
-    duration: '2017',
-    component: React.lazy(() =>
+    project: {
+      id: '30-days-2-years',
+      name: '30 days/2 Years',
+      duration: '2017',
+    },
+    ProjectPage: React.lazy(() =>
       import('../projectPages/ThirtyDaysTwoYearsPage')
     ),
   },
   {
-    id: 'the-intermission',
-    name: 'The Intermission',
-    duration: '2016',
-    component: React.lazy(() => import('../projectPages/TheIntermissionPage')),
+    project: {
+      id: 'the-intermission',
+      name: 'The Intermission',
+      duration: '2016',
+    },
+    ProjectPage: React.lazy(() =>
+      import('../projectPages/TheIntermissionPage')
+    ),
   },
   {
-    id: 'facebook-developers',
-    name: 'Facebook Developers',
-    duration: '2015',
-    component: React.lazy(() =>
+    project: {
+      id: 'facebook-developers',
+      name: 'Facebook Developers',
+      duration: '2015',
+    },
+    ProjectPage: React.lazy(() =>
       import('../projectPages/FacebookDevelopersPage')
     ),
   },
   {
-    id: 'format-custom-pages',
-    name: 'Format Custom Pages',
-    duration: '2014',
-    component: React.lazy(() =>
+    project: {
+      id: 'format-custom-pages',
+      name: 'Format Custom Pages',
+      duration: '2014',
+    },
+    ProjectPage: React.lazy(() =>
       import('../projectPages/FormatCustomPagesPage')
     ),
   },
   {
-    id: 'social-fashion-with-lookbook',
-    name: 'Social Fashion with LOOKBOOK',
-    duration: '2012',
-    component: React.lazy(() =>
+    project: {
+      id: 'social-fashion-with-lookbook',
+      name: 'Social Fashion with LOOKBOOK',
+      duration: '2012',
+    },
+    ProjectPage: React.lazy(() =>
       import('../projectPages/SocialFashionWithLookbookPage')
     ),
   },
   {
-    id: 'design-and-print',
-    name: 'Design & Print',
-    duration: '2011-2016',
-    component: React.lazy(() => import('../projectPages/DesignAndPrintPage')),
+    project: {
+      id: 'design-and-print',
+      name: 'Design & Print',
+      duration: '2011-2016',
+    },
+    ProjectPage: React.lazy(() => import('../projectPages/DesignAndPrintPage')),
   },
 ];
 
@@ -114,12 +136,15 @@ export const App = () => (
         >
           <Switch>
             <Route path="/" exact>
-              <Home {...{ projects }} projectsToDisplay={5} />
+              <Home
+                projects={projects.map(({ project }) => project)}
+                projectsToDisplay={5}
+              />
             </Route>
-            {projects.map(project => (
+            {projects.map(({ project, ProjectPage }) => (
               <Route key={project.id} path={`/projects/${project.id}`} exact>
-                <Suspense fallback={<Box>Loading project...</Box>}>
-                  <project.component />
+                <Suspense fallback={<Box>Loading {project.name}...</Box>}>
+                  <ProjectPage {...{ project }} />
                 </Suspense>
               </Route>
             ))}

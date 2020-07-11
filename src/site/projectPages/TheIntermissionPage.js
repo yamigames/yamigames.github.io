@@ -3,10 +3,10 @@
 import { Heading, jsx } from 'theme-ui';
 import { ProjectPage } from '../components/ProjectPage';
 
-const TheIntermissionPage = () => (
-  <ProjectPage title="The Intermission">
+const TheIntermission = ({ ...props }) => (
+  <ProjectPage {...props}>
     <Heading variant="h3">Overview</Heading>
   </ProjectPage>
 );
 
-export default TheIntermissionPage;
+export default TheIntermission;

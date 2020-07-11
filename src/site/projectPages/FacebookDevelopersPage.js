@@ -3,10 +3,10 @@
 import { Heading, jsx } from 'theme-ui';
 import { ProjectPage } from '../components/ProjectPage';
 
-const FacebookDevelopersPage = () => (
-  <ProjectPage title="Facebook Developers">
+const FacebookDevelopers = ({ ...props }) => (
+  <ProjectPage {...props}>
     <Heading variant="h3">Overview</Heading>
   </ProjectPage>
 );
 
-export default FacebookDevelopersPage;
+export default FacebookDevelopers;

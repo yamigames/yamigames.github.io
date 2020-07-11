@@ -3,10 +3,10 @@
 import { Heading, jsx } from 'theme-ui';
 import { ProjectPage } from '../components/ProjectPage';
 
-const XDesignSystemPage = () => (
-  <ProjectPage title="xDesign System">
+const XDesignSystem = ({...props}) => (
+  <ProjectPage {...props}>
     <Heading variant="h3">Overview</Heading>
   </ProjectPage>
 );
 
-export default XDesignSystemPage;
+export default XDesignSystem;

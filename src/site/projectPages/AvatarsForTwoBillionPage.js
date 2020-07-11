@@ -3,10 +3,10 @@
 import { Heading, jsx } from 'theme-ui';
 import { ProjectPage } from '../components/ProjectPage';
 
-const AvatarsForTwoBillionPage = () => (
-  <ProjectPage title="Avatars for Two Billion">
+const AvatarsForTwoBillion = ({ ...props }) => (
+  <ProjectPage {...props}>
     <Heading variant="h3">Overview</Heading>
   </ProjectPage>
 );
 
-export default AvatarsForTwoBillionPage;
+export default AvatarsForTwoBillion;
