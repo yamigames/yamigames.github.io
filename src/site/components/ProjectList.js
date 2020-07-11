@@ -28,17 +28,23 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
         />
       ))}
       {!showMore && (
-        <Box
+        <Flex
           p={4}
           sx={{
             ...border({
               top: true,
             }),
+            alignItems: 'center',
           }}
           onClick={() => setShowMore(true)}
         >
-          <Heading variant="h3">See {hiddenProjects.length} More</Heading>
-        </Box>
+          <Box sx={{ flex: '1 1 auto' }}>
+            <Heading variant="h3">See {hiddenProjects.length} More</Heading>
+          </Box>
+          <Box>
+            <Icon.DownChevron />
+          </Box>
+        </Flex>
       )}
     </Box>
   );
