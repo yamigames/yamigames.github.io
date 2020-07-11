@@ -4,23 +4,28 @@ export const socialLinks = [
   {
     service: 'Instagram',
     url: 'https://www.instagram.com/iamnbutler/',
+    showInSidebar: false,
   },
   {
     service: 'Twitter',
     url: 'https://twitter.com/iamnbutler',
+    showInSidebar: true,
   },
   {
     service: 'Dribbble',
     url: 'https://dribbble.com/iamnbutler',
+    showInSidebar: false,
   },
   {
     service: 'Github',
     url: 'https://github.com/iamnbutler',
+    showInSidebar: true,
   },
   {
     service: 'Inspo',
     // TODO(Nate): Insert real link.
     url: 'https://thiscatdoesnotexist.com/',
+    showInSidebar: false,
   },
 ];
 
