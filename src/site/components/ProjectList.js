@@ -50,35 +50,33 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
   );
 };
 
-const ProjectEntry = ({ project, ...props }) => {
-  return (
-    <Flex {...props}>
-      <Box sx={{ flex: '1 1 auto' }}>
-        <Heading variant="h3">
-          <Link
-            to={`/projects/${project.id}`}
-            sx={{
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            {project.name}.
-          </Link>
-        </Heading>
-      </Box>
-      <Box>
-        <Flex
+const ProjectEntry = ({ project, ...props }) => (
+  <Flex {...props}>
+    <Box sx={{ flex: '1 1 auto' }}>
+      <Heading variant="h3">
+        <Link
+          to={`/projects/${project.id}`}
           sx={{
-            alignItems: 'center',
+            color: 'inherit',
+            textDecoration: 'none',
           }}
         >
-          <Text variant="h3">{project.duration}</Text>
-          <Icon.RightChevron ml={4} />
-        </Flex>
-      </Box>
-    </Flex>
-  );
-};
+          {project.name}.
+        </Link>
+      </Heading>
+    </Box>
+    <Box>
+      <Flex
+        sx={{
+          alignItems: 'center',
+        }}
+      >
+        <Text variant="h3">{project.duration}</Text>
+        <Icon.RightChevron ml={4} />
+      </Flex>
+    </Box>
+  </Flex>
+);
 
 ProjectEntry.defaultProps = {
   p: 4,

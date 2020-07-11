@@ -24,85 +24,83 @@ export const Home = ({
   contactLinks = [],
   projectsToDisplay,
   ...props
-}) => {
-  return (
-    <Box {...props}>
-      <Bio p={4} />
-      <Spacer />
-      <Heading variant="h2" p={4}>
-        Selected Work
-      </Heading>
-      <ProjectList
-        sx={{
-          ...border({
-            top: true,
-          }),
-        }}
-        {...{ projects, projectsToDisplay }}
-      />
-      <Spacer />
-      <Heading
-        variant="h2"
-        p={4}
-        sx={{
-          ...border({
-            bottom: true,
-          }),
-        }}
-      >
-        Feed
-      </Heading>
-      <TwitterFeed
-        sx={{
-          ...border({
-            bottom: true,
-          }),
-        }}
-        tweets={placeholderTweets}
-      />
-      <Heading
-        variant="h2"
-        p={4}
-        sx={{
-          ...border({
-            bottom: true,
-          }),
-        }}
-      >
-        Find Me Elsewhere
-      </Heading>
-      <Flex p={4}>
-        <Box>
-          <Text>
-            I can be pretty intermittent on social media, but feel free to give
-            me a follow and I'll try to say hi!
-          </Text>
-        </Box>
-        <SocialLinks links={socialLinks} />
-      </Flex>
-      <Flex p={4}>
-        <Box>
-          <Heading variant="h3" mb={4}>
-            Get In Touch.
-          </Heading>
-          <Text>
-            I'm currently working on Internal Tools @ Facebook, but if you want
-            to get in touch feel free to reach out.
-          </Text>
-        </Box>
-        <SocialLinks links={contactLinks} />
-      </Flex>
-      <Spacer
-        p={6}
-        pr={4}
-        sx={{
-          display: 'flex',
-          borderBottomStyle: 'none',
-          justifyContent: 'flex-end',
-        }}
-      >
-        <BackToTopButton>Back to Top</BackToTopButton>
-      </Spacer>
-    </Box>
-  );
-};
+}) => (
+  <Box {...props}>
+    <Bio p={4} />
+    <Spacer />
+    <Heading variant="h2" p={4}>
+      Selected Work
+    </Heading>
+    <ProjectList
+      sx={{
+        ...border({
+          top: true,
+        }),
+      }}
+      {...{ projects, projectsToDisplay }}
+    />
+    <Spacer />
+    <Heading
+      variant="h2"
+      p={4}
+      sx={{
+        ...border({
+          bottom: true,
+        }),
+      }}
+    >
+      Feed
+    </Heading>
+    <TwitterFeed
+      sx={{
+        ...border({
+          bottom: true,
+        }),
+      }}
+      tweets={placeholderTweets}
+    />
+    <Heading
+      variant="h2"
+      p={4}
+      sx={{
+        ...border({
+          bottom: true,
+        }),
+      }}
+    >
+      Find Me Elsewhere
+    </Heading>
+    <Flex p={4}>
+      <Box>
+        <Text>
+          I can be pretty intermittent on social media, but feel free to give me
+          a follow and I'll try to say hi!
+        </Text>
+      </Box>
+      <SocialLinks links={socialLinks} />
+    </Flex>
+    <Flex p={4}>
+      <Box>
+        <Heading variant="h3" mb={4}>
+          Get In Touch.
+        </Heading>
+        <Text>
+          I'm currently working on Internal Tools @ Facebook, but if you want to
+          get in touch feel free to reach out.
+        </Text>
+      </Box>
+      <SocialLinks links={contactLinks} />
+    </Flex>
+    <Spacer
+      p={6}
+      pr={4}
+      sx={{
+        display: 'flex',
+        borderBottomStyle: 'none',
+        justifyContent: 'flex-end',
+      }}
+    >
+      <BackToTopButton>Back to Top</BackToTopButton>
+    </Spacer>
+  </Box>
+);
