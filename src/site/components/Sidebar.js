@@ -2,6 +2,7 @@
 
 import { Box, Flex, Heading, jsx, Text } from 'theme-ui';
 import { Inset } from '../../designSystem/components/Inset';
+import { Link } from '../../designSystem/components/Link';
 import { socialLinks } from '../config';
 import { Logo } from './Logo';
 
@@ -65,7 +66,9 @@ export const Sidebar = ({ ...props }) => (
               .filter(link => link.showInSidebar)
               .map(link => (
                 <Text key={link.service} variant="h3" mr={4}>
-                  {link.service}
+                  <Link external to={link.url}>
+                    {link.service}
+                  </Link>
                 </Text>
               ))}
           </Flex>
