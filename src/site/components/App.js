@@ -16,7 +16,7 @@ const projects = [
       name: 'xDesign System',
       duration: '2020',
     },
-    ProjectPage: React.lazy(() => import('../projectPages/XDesignSystemPage')),
+    ProjectPage: React.lazy(() => import('../projectPages/XDesignSystem')),
   },
   {
     project: {
@@ -25,7 +25,7 @@ const projects = [
       duration: '2018',
     },
     ProjectPage: React.lazy(() =>
-      import('../projectPages/AvatarsForTwoBillionPage')
+      import('../projectPages/AvatarsForTwoBillion')
     ),
   },
   {
@@ -34,9 +34,7 @@ const projects = [
       name: 'Sharing Expression',
       duration: '2017',
     },
-    ProjectPage: React.lazy(() =>
-      import('../projectPages/SharingExpressionPage')
-    ),
+    ProjectPage: React.lazy(() => import('../projectPages/SharingExpression')),
   },
   {
     project: {
@@ -44,9 +42,7 @@ const projects = [
       name: 'fb.design Wallpapers',
       duration: '2017',
     },
-    ProjectPage: React.lazy(() =>
-      import('../projectPages/FbDesignWallpapersPage')
-    ),
+    ProjectPage: React.lazy(() => import('../projectPages/FbDesignWallpapers')),
   },
   {
     project: {
@@ -54,9 +50,7 @@ const projects = [
       name: '30 days/2 Years',
       duration: '2017',
     },
-    ProjectPage: React.lazy(() =>
-      import('../projectPages/ThirtyDaysTwoYearsPage')
-    ),
+    ProjectPage: React.lazy(() => import('../projectPages/ThirtyDaysTwoYears')),
   },
   {
     project: {
@@ -64,9 +58,7 @@ const projects = [
       name: 'The Intermission',
       duration: '2016',
     },
-    ProjectPage: React.lazy(() =>
-      import('../projectPages/TheIntermissionPage')
-    ),
+    ProjectPage: React.lazy(() => import('../projectPages/TheIntermission')),
   },
   {
     project: {
@@ -74,9 +66,7 @@ const projects = [
       name: 'Facebook Developers',
       duration: '2015',
     },
-    ProjectPage: React.lazy(() =>
-      import('../projectPages/FacebookDevelopersPage')
-    ),
+    ProjectPage: React.lazy(() => import('../projectPages/FacebookDevelopers')),
   },
   {
     project: {
@@ -84,9 +74,7 @@ const projects = [
       name: 'Format Custom Pages',
       duration: '2014',
     },
-    ProjectPage: React.lazy(() =>
-      import('../projectPages/FormatCustomPagesPage')
-    ),
+    ProjectPage: React.lazy(() => import('../projectPages/FormatCustomPages')),
   },
   {
     project: {
@@ -95,7 +83,7 @@ const projects = [
       duration: '2012',
     },
     ProjectPage: React.lazy(() =>
-      import('../projectPages/SocialFashionWithLookbookPage')
+      import('../projectPages/SocialFashionWithLookbook')
     ),
   },
   {
@@ -104,7 +92,7 @@ const projects = [
       name: 'Design & Print',
       duration: '2011-2016',
     },
-    ProjectPage: React.lazy(() => import('../projectPages/DesignAndPrintPage')),
+    ProjectPage: React.lazy(() => import('../projectPages/DesignAndPrint')),
   },
 ];
 
