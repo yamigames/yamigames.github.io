@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Box, jsx, ThemeProvider } from 'theme-ui';
 import { border } from '../../designSystem';
 import { theme } from '../theme';
+import { SCROLL_CONTAINER } from './BackToTopButton';
 import { Home } from './Home';
 import { Project } from './Project';
 import { Sidebar } from './Sidebar';
@@ -82,6 +83,7 @@ export const App = () => (
           }}
         />
         <Box
+          id={SCROLL_CONTAINER}
           sx={{
             overflowY: 'scroll',
           }}

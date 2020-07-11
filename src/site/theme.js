@@ -91,4 +91,12 @@ export const theme = {
       lineHeight: 0,
     },
   },
+  buttons: {
+    primary: {
+      fontFamily: 'heading',
+      backgroundColor: 'white',
+      color: 'text',
+      borderRadius: 0,
+    },
+  },
 };

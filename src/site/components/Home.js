@@ -4,6 +4,7 @@ import range from 'ramda/src/range';
 import { Box, Heading, jsx } from 'theme-ui';
 import { border } from '../../designSystem';
 import { Spacer } from '../../designSystem/components/Spacer';
+import { BackToTopButton } from './BackToTopButton';
 import { Bio } from './Bio';
 import { ProjectList } from './ProjectList';
 import { TwitterFeed } from './TwitterFeed';
@@ -55,6 +56,17 @@ export const Home = ({ projects = [], projectsToDisplay, ...props }) => {
       <Heading variant="h2" p={4}>
         Find Me Elsewhere
       </Heading>
+      <Spacer
+        p={6}
+        pr={4}
+        sx={{
+          display: 'flex',
+          borderBottomStyle: 'none',
+          justifyContent: 'flex-end',
+        }}
+      >
+        <BackToTopButton>Back to Top</BackToTopButton>
+      </Spacer>
     </Box>
   );
 };
