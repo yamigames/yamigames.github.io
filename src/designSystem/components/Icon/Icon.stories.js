@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { Icon } from './Icon';
+import { Icon } from './';
 import { Box, jsx } from 'theme-ui';
 
 export default {
