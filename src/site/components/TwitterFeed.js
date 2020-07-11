@@ -15,7 +15,7 @@ export const TwitterFeed = ({ tweets = [], ...props }) => (
         key={tweet.id}
         mr={4}
         sx={{
-            flex: '1 0 50%'
+          flex: '1 0 50%',
         }}
         {...{ tweet }}
       />

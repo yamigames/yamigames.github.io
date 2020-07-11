@@ -68,14 +68,17 @@ describe('border', () => {
       all: [null, false, true],
     });
 
-    ['borderTopStyle', 'borderRightStyle', 'borderBottomStyle', 'borderLeftStyle'].forEach(
-      property => {
-        expect(Array.isArray(actual[property])).toBe(true);
-        expect(actual[property][0]).toBeNull();
-        expect(actual[property][1]).toBe('none');
-        expect(actual[property][2]).toBe('solid');
-      }
-    );
+    [
+      'borderTopStyle',
+      'borderRightStyle',
+      'borderBottomStyle',
+      'borderLeftStyle',
+    ].forEach(property => {
+      expect(Array.isArray(actual[property])).toBe(true);
+      expect(actual[property][0]).toBeNull();
+      expect(actual[property][1]).toBe('none');
+      expect(actual[property][2]).toBe('solid');
+    });
   });
 
   it('supports response values for `top`', () => {
