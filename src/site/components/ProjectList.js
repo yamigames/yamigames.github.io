@@ -4,11 +4,11 @@ import { lighten } from '@theme-ui/color';
 import drop from 'ramda/src/drop';
 import take from 'ramda/src/take';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Box, Flex, Heading, jsx, Text } from 'theme-ui';
 import { border } from '../../designSystem';
 import { Icon } from '../../designSystem/components/Icon';
 import { Inset } from '../../designSystem/components/Inset';
+import { Link } from '../../designSystem/components/Link';
 
 const projectEntryHover = () => ({
   '&:hover': {
@@ -65,13 +65,7 @@ export const ProjectList = ({ projects = [], projectsToDisplay, ...props }) => {
 };
 
 const ProjectEntry = ({ project, ...props }) => (
-  <Link
-    to={`/projects/${project.id}`}
-    sx={{
-      color: 'inherit',
-      textDecoration: 'none',
-    }}
-  >
+  <Link to={`/projects/${project.id}`}>
     <Inset
       {...props}
       sx={{

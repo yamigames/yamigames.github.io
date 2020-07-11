@@ -1,6 +1,7 @@
 /** @jsx jsx */
 
 import { Box, Flex, jsx, Text } from 'theme-ui';
+import { Link } from '../../designSystem/components/Link';
 
 export const SocialLinks = ({ links, ...props }) => (
   <Flex
@@ -14,15 +15,9 @@ export const SocialLinks = ({ links, ...props }) => (
     {links.map(link => (
       <Box key={link.service} sx={{ flex: '1 0 auto' }}>
         <Text variant="h3">
-          <a
-            href={link.url}
-            sx={{
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
+          <Link external to={link.url}>
             {link.service}
-          </a>
+          </Link>
         </Text>
       </Box>
     ))}
