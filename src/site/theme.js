@@ -35,7 +35,7 @@ const typeScale = [
     fontWeight: 400,
     lineHeight: 32,
   },
-].reverse();
+].reverse(); // Reversed to ensure that stack is listed from large to small
 
 export const theme = {
   fonts: {
