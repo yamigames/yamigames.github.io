@@ -92,13 +92,19 @@ export const theme = {
     },
     h2: {
       fontFamily: 'heading',
-      fontSize: 3,
+      fontSize: 4,
       fontWeight: 3,
       lineHeight: 3,
     },
     h3: {
       fontFamily: 'heading',
       fontSize: 2,
+      fontWeight: 2,
+      lineHeight: 2,
+    },
+    h4: {
+      fontFamily: 'heading',
+      fontSize: 1,
       fontWeight: 2,
       lineHeight: 2,
     },

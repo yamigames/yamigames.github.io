@@ -13,7 +13,7 @@ export const ProjectPage = ({ project, children, ...props }) => (
         }),
       }}
     >
-      <Heading variant="h3">{project.name}</Heading>
+      <Heading variant="h2">{project.name}</Heading>
     </Inset>
     <Inset>{children}</Inset>
   </Box>

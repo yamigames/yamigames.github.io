@@ -37,7 +37,7 @@ export const Sidebar = ({ ...props }) => (
         }}
       >
         <Heading
-          variant="h1"
+          variant="h2"
           sx={{
             flex: '0 1 auto',
           }}

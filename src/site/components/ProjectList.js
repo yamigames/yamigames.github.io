@@ -13,7 +13,7 @@ import { Link } from '../../designSystem/components/Link';
 const projectEntryHover = () => ({
   '&:hover': {
     cursor: 'pointer',
-    backgroundColor: lighten('primary', 0.25),
+    backgroundColor: lighten('primary', 0.38),
   },
 });
 
