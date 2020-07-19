@@ -23,7 +23,6 @@ export const socialLinks = [
   },
   {
     service: 'Inspo',
-    // TODO(Nate): Insert real link.
     url: 'https://goo.gl/photos/qeTYKqGErL45REbW7',
     showInSidebar: false,
   },
