@@ -50,31 +50,31 @@ export const projects = [
   },
   {
     project: {
-      id: 'avatars-for-two-billion',
-      name: 'Avatars for Two Billion',
+      id: 'facebook-avatars',
+      name: 'Facebook Avatars',
       duration: '2018',
     },
     ProjectPage: lazy(() => import('./projectPages/AvatarsForTwoBillion')),
   },
   {
     project: {
-      id: 'sharing-expression',
-      name: 'Sharing Expression',
+      id: 'feed-expression',
+      name: 'News Feed Expression',
       duration: '2017',
     },
     ProjectPage: lazy(() => import('./projectPages/SharingExpression')),
   },
   {
     project: {
-      id: 'fb-design-wallpapers',
-      name: 'fb.design Wallpapers',
+      id: 'fb-wallpapers',
+      name: 'Facebook.design',
       duration: '2017',
     },
     ProjectPage: lazy(() => import('./projectPages/FbDesignWallpapers')),
   },
   {
     project: {
-      id: '30-days-2-years',
+      id: 'learning-3d',
       name: '30 days/2 Years',
       duration: '2017',
     },
