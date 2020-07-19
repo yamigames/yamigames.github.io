@@ -1,14 +1,16 @@
 export const PRIMARY = '#2f80ed';
 
-const headingFontStack = `'Fira Sans', sans-serif`;
+const headingFontStack = `'Raleway', sans-serif`;
 
 const bodyFontStack = `'Bitter', serif`;
+
+const codeFontStack = `'Fira Code', serif`;
 
 const typeScale = [
   {
     fontFamily: headingFontStack,
     fontSize: 48.83,
-    fontWeight: 900,
+    fontWeight: 800,
     lineHeight: 56,
   },
   {
@@ -24,6 +26,12 @@ const typeScale = [
     lineHeight: 40,
   },
   {
+    fontFamily: headingFontStack,
+    fontSize: 25,
+    fontWeight: 700,
+    lineHeight: 40,
+  },
+  {
     fontFamily: bodyFontStack,
     fontSize: 25,
     fontWeight: 400,
@@ -32,6 +40,12 @@ const typeScale = [
   {
     fontFamily: bodyFontStack,
     fontSize: 20,
+    fontWeight: 400,
+    lineHeight: 32,
+  },
+  {
+    fontFamily: codeFontStack,
+    fontSize: 16,
     fontWeight: 400,
     lineHeight: 32,
   },
