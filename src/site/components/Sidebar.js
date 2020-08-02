@@ -28,9 +28,6 @@ export const Sidebar = ({ ...props }) => (
         height: '100%',
       }}
     >
-      <Box>
-        <Logo />
-      </Box>
       <Flex
         sx={{
           flexDirection: 'column',
@@ -74,6 +71,9 @@ export const Sidebar = ({ ...props }) => (
           </Flex>
         </Box>
       </Flex>
+      <Box>
+        <Logo />
+      </Box>
     </Flex>
   </Inset>
 );
