@@ -34,7 +34,7 @@ export const Sidebar = ({ ...props }) => (
         }}
       >
         <Heading
-          variant="h2"
+          variant="h1"
           sx={{
             flex: '0 1 auto',
           }}
@@ -48,9 +48,9 @@ export const Sidebar = ({ ...props }) => (
           }}
         >
           {navigationLinks.map(link => (
-            <Text key={link.title} variant="h3" py={2}>
+            <Heading key={link.title} variant="h3" py={2}>
               {link.title}
-            </Text>
+            </Heading>
           ))}
         </Flex>
         <Box

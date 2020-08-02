@@ -6,11 +6,14 @@ import profileImage from './profile.jpg';
 export const Bio = ({ ...props }) => (
   <Flex {...props}>
     <Box mr={6}>
-      <Heading variant="h3">Hey There,</Heading>
-      <Text>
+      <Heading variant="h2">Hey There,</Heading>
+      <Text variant="body">
         I'm a product designer living in California. I use rapid iteration and
         prototyping to help teams build powerful products. I've worked at places
         like Facebook and Format.
+      </Text>
+      <Text variant="body">
+        Read More &rarr;
       </Text>
     </Box>
     <Box

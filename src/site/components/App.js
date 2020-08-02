@@ -16,7 +16,7 @@ export const App = () => (
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: ['auto', '33% 1fr'],
+          gridTemplateColumns: ['auto', '22% 1fr'],
           height: '100vh',
           ...border({
             all: true,
@@ -41,7 +41,7 @@ export const App = () => (
             <Route path="/" exact>
               <Home
                 projects={projects.map(({ project }) => project)}
-                projectsToDisplay={5}
+                projectsToDisplay={4}
                 {...{ socialLinks, contactLinks }}
               />
             </Route>
