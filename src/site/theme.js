@@ -1,4 +1,5 @@
-export const PRIMARY = '#2f80ed';
+export const PRIMARY = 'rgba(47, 128, 237, 1)';
+export const SECONDARY = 'rgba(47, 128, 237, 0.7)';
 
 const headingFontStack = `'Raleway', sans-serif`;
 
@@ -111,21 +112,21 @@ export const theme = {
     },
     body: {
       fontFamily: 'body',
-      fontSize: 3,
+      fontSize: 2,
       fontWeight: 1,
-      lineHeight: 3,
+      lineHeight: 2,
     },
     caption: {
       fontFamily: 'body',
-      fontSize: 2,
-      fontWeight: 2,
-      lineHeight: 2,
-    },
-    code: {
-      fontFamily: 'code',
       fontSize: 1,
       fontWeight: 1,
       lineHeight: 1,
+    },
+    code: {
+      fontFamily: 'code',
+      fontSize: 0,
+      fontWeight: 1,
+      lineHeight: 0,
     }
   },
   buttons: {
