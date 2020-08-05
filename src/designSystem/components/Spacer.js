@@ -25,7 +25,7 @@ export const Spacer = ({ ...props }) => (
 );
 
 Spacer.defaultProps = {
-  p: 3,
+  p: 4,
 };
 
-Spacer.Large = props => <Spacer {...props} p={4} />;
+Spacer.Large = props => <Spacer {...props} p={5} />;
