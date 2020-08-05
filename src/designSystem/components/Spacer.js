@@ -17,7 +17,7 @@ export const Spacer = ({ ...props }) => (
           ${colors.primary},
           ${colors.primary} 8px,
           ${colors.background} 8px,
-          ${colors.background} 32px
+          ${colors.background} 40px
         );
       `,
     }}
