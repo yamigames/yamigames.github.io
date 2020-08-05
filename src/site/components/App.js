@@ -16,7 +16,7 @@ export const App = () => (
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: ['auto', '22% 1fr'],
+          gridTemplateColumns: ['auto', '22% 986px'],
           height: '100vh',
           ...border({
             all: true,
@@ -35,6 +35,9 @@ export const App = () => (
           id={SCROLL_CONTAINER}
           sx={{
             overflowY: 'scroll',
+            ...border({
+              right: [null, true],
+            }),
           }}
         >
           <Switch>
