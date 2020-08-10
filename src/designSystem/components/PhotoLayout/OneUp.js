@@ -1,11 +1,19 @@
 /** @jsx jsx */
 
-import { jsx } from 'theme-ui';
+import { Flex, jsx } from 'theme-ui';
+import { border } from '../../lib/borders';
 import { Inset } from '../Inset';
-import { FullBleed } from './FullBleed';
 
 export const OneUp = ({ children, ...props }) => (
   <Inset {...props}>
-    <FullBleed>{children}</FullBleed>
+    <Flex
+      sx={{
+        ...border({
+          all: true,
+        }),
+      }}
+    >
+      {children}
+    </Flex>
   </Inset>
 );

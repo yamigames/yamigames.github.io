@@ -1,7 +1,6 @@
 /** @jsx jsx */
 
 import { Box, Image, jsx } from 'theme-ui';
-import { border } from '../../../designSystem';
 import { FourUpGrid } from './FourUpGrid';
 
 export default {
@@ -13,9 +12,6 @@ export const Default = () => (
   <Box
     sx={{
       maxWidth: '50%',
-      ...border({
-        all: true,
-      }),
     }}
   >
     <FourUpGrid

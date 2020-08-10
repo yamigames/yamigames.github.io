@@ -1,6 +1,7 @@
 /** @jsx jsx */
 
-import { Grid, jsx } from 'theme-ui';
+import { Flex, Grid, jsx } from 'theme-ui';
+import { border } from '../../';
 import { Inset } from '../Inset';
 
 export const FourUpGrid = ({
@@ -11,10 +12,36 @@ export const FourUpGrid = ({
   ...props
 }) => (
   <Inset {...props}>
-    <Grid
-      columns="1fr 1fr"
-      gap={4}
-      children={[topLeft, topRight, bottomLeft, bottomRight]}
-    />
+    <Grid columns="1fr 1fr" gap={4}>
+      {[
+        {
+          key: 'top-left',
+          image: topLeft,
+        },
+        {
+          key: 'top-right',
+          image: topRight,
+        },
+        {
+          key: 'bottom-left',
+          image: bottomLeft,
+        },
+        {
+          key: 'bottom-right',
+          image: bottomRight,
+        },
+      ].map(({ key, image }) => (
+        <Flex
+          {...{ key }}
+          sx={{
+            ...border({
+              all: true,
+            }),
+          }}
+        >
+          {image}
+        </Flex>
+      ))}
+    </Grid>
   </Inset>
 );
