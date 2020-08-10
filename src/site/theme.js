@@ -127,7 +127,7 @@ export const theme = {
       fontSize: 0,
       fontWeight: 1,
       lineHeight: 0,
-    }
+    },
   },
   buttons: {
     primary: {
