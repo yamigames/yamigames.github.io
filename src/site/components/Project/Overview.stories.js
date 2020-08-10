@@ -1,12 +1,22 @@
-/** @jsx jsx */
+import React from 'react';
+import { border } from '../../../designSystem';
+import { Inset } from '../../../designSystem/components/Inset';
+import { Overview } from './Overview';
 
-import { jsx } from 'theme-ui';
-import { Project } from '../components/Project';
-import { ProjectPage } from '../components/ProjectPage';
+export default {
+  title: 'Project.Overview',
+  component: Overview,
+};
 
-const XDesignSystem = ({ ...props }) => (
-  <ProjectPage {...props}>
-    <Project.Overview
+export const Default = () => (
+  <Inset
+    sx={{
+      ...border({
+        all: true,
+      }),
+    }}
+  >
+    <Overview
       goal="Ship a unified navigation experience across many existing tools."
       roles={['Product Lead', 'Vision & Strategy', 'Systems Design']}
       team={['4-6 People', 'Design, Eng. Research']}
@@ -15,8 +25,6 @@ const XDesignSystem = ({ ...props }) => (
       appreciate voices different than their own. Understanding alternate
       viewpoints and another’s worldview can be found at the core of becoming a
       more open person.
-    </Project.Overview>
-  </ProjectPage>
+    </Overview>
+  </Inset>
 );
-
-export default XDesignSystem;
