@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx } from 'theme-ui';
+import { jsx, Text } from 'theme-ui';
 import { Project } from '../components/Project';
 import { ProjectPage } from '../components/ProjectPage';
 
@@ -16,6 +16,14 @@ const XDesignSystem = ({ ...props }) => (
       viewpoints and another’s worldview can be found at the core of becoming a
       more open person.
     </Project.Overview>
+    <Project.Body>
+      <Text variant="body">
+        Learning to work in a variety of spaces and mediums allows one to grow
+        and appreciate voices different than their own. Understanding alternate
+        viewpoints and another’s worldview can be found at the core of becoming
+        a more open person.
+      </Text>
+    </Project.Body>
   </ProjectPage>
 );
 
