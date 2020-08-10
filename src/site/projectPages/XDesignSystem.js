@@ -31,6 +31,14 @@ const XDesignSystem = ({ ...props }) => (
         map created is reminiscent of stars. Over time the map scrolls, showing
         the ever-continuing stream of data that is moving through the system.
       </Copy>
+      <PhotoLayout.TwoUpStaggered
+        left={
+          <Image src="https://images.unsplash.com/photo-1584627404349-0bb529b998b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
+        }
+        right={
+          <Image src="https://images.unsplash.com/photo-1584627404349-0bb529b998b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
+        }
+      />
       <Copy headline="Validation">
         Learning to work in a variety of spaces and mediums allows one to grow
         and appreciate voices different than their own. Understanding alternate
