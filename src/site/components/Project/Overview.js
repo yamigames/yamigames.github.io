@@ -1,6 +1,8 @@
 /** @jsx jsx */
 
-import { Box, Grid, Heading, jsx, Text } from 'theme-ui';
+import { Box, Grid, jsx } from 'theme-ui';
+import { Caption } from '../../../designSystem/components/Caption';
+import { Copy } from '../../../designSystem/components/Copy';
 
 export const Overview = ({
   goal = '',
@@ -10,27 +12,15 @@ export const Overview = ({
   ...props
 }) => (
   <Box {...props}>
-    <Heading variant="h3" mb={2}>
-      Overview
-    </Heading>
-    <Text variant="body">{children}</Text>
+    <Copy headline="Overview">{children}</Copy>
     <Grid columns="1fr 1fr 1fr" py={2}>
-      <Callout title="Goal">{goal}</Callout>
-      <Callout title="Roles">{roles.join(', ')}</Callout>
-      <Callout title="Team">
+      <Caption headline="Goal">{goal}</Caption>
+      <Caption headline="Roles">{roles.join(', ')}</Caption>
+      <Caption headline="Team">
         {team.map((teamLine, index) => (
           <Box key={index}>{teamLine}</Box>
         ))}
-      </Callout>
+      </Caption>
     </Grid>
-  </Box>
-);
-
-const Callout = ({ title = '', children, ...props }) => (
-  <Box {...props}>
-    <Heading variant="h4" mb={2}>
-      {title}
-    </Heading>
-    <Text variant="caption">{children}</Text>
   </Box>
 );
