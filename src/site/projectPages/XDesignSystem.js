@@ -30,6 +30,7 @@ const XDesignSystem = ({ ...props }) => (
           alternate viewpoints and another’s worldview can be found at the core
           of becoming a more open person.
         </Copy>
+        <Box p={1} />
         <Copy>
           Communication isn't a constant stream, but something sporadic. Seeing
           it visually mapped creates interesting and random forms as it moves.
@@ -37,6 +38,7 @@ const XDesignSystem = ({ ...props }) => (
           showing the ever-continuing stream of data that is moving through the
           system.
         </Copy>
+        <Box p={3} />
         <PhotoLayout.TwoUpStaggered
           left={
             <Image src="https://images.unsplash.com/photo-1584627404349-0bb529b998b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
@@ -45,12 +47,14 @@ const XDesignSystem = ({ ...props }) => (
             <Image src="https://images.unsplash.com/photo-1584627404349-0bb529b998b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
           }
         />
+        <Box p={3} />
         <Copy headline="Validation">
           Learning to work in a variety of spaces and mediums allows one to grow
           and appreciate voices different than their own. Understanding
           alternate viewpoints and another’s worldview can be found at the core
           of becoming a more open person.
         </Copy>
+        <Box p={1} />
         <Copy>
           Communication isn't a constant stream, but something sporadic. Seeing
           it visually mapped creates interesting and random forms as it moves.
@@ -58,9 +62,11 @@ const XDesignSystem = ({ ...props }) => (
           showing the ever-continuing stream of data that is moving through the
           system.
         </Copy>
+        <Box p={3} />
         <PhotoLayout.OneUp>
           <Image src="https://images.unsplash.com/photo-1584627404349-0bb529b998b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" />
         </PhotoLayout.OneUp>
+        <Box p={3} />
         <Copy headline="Reflection & Next Steps">
           Learning to work in a variety of spaces and mediums allows one to grow
           and appreciate voices different than their own. Understanding
@@ -71,7 +77,7 @@ const XDesignSystem = ({ ...props }) => (
     }
     footer={
       <Box>
-        <Copy headline="Wrapup">
+        <Copy headline="Wrapup" mb={4}>
           Learning to work in a variety of spaces and mediums allows one to grow
           and appreciate voices different than their own. Understanding
           alternate viewpoints and another’s worldview can be found at the core

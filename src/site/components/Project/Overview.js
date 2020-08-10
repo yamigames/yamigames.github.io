@@ -12,8 +12,10 @@ export const Overview = ({
   ...props
 }) => (
   <Box {...props}>
-    <Copy headline="Overview">{children}</Copy>
-    <Grid columns="1fr 1fr 1fr" py={2}>
+    <Copy headline="Overview" mb={4}>
+      {children}
+    </Copy>
+    <Grid columns="1fr 1fr 1fr">
       <Caption headline="Goal">{goal}</Caption>
       <Caption headline="Roles">{roles.join(', ')}</Caption>
       <Caption headline="Team">
