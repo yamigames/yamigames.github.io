@@ -1,8 +1,9 @@
 /** @jsx jsx */
 
 import range from 'ramda/src/range';
-import { Box, Flex, Grid, Heading, jsx, Text } from 'theme-ui';
+import { Box, Flex, Grid, Heading, jsx } from 'theme-ui';
 import { border } from '../../designSystem';
+import { Copy } from '../../designSystem/components/Copy';
 import { Inset } from '../../designSystem/components/Inset';
 import { Spacer } from '../../designSystem/components/Spacer';
 import { BackToTopButton } from './BackToTopButton';
@@ -105,27 +106,39 @@ export const Home = ({
     </Inset>
     <Inset>
       <Flex>
-        <Box>
-          <Text>
-            I can be pretty intermittent on social media, but feel free to give
-            me a follow and I'll try to say hi!
-          </Text>
-        </Box>
-        <SocialLinks links={socialLinks} />
+        <Copy
+          sx={{
+            flex: '1 1 auto',
+          }}
+        >
+          I can be pretty intermittent on social media, but feel free to give me
+          a follow and I'll try to say hi!
+        </Copy>
+        <SocialLinks
+          sx={{
+            flex: '1 0 auto',
+          }}
+          links={socialLinks}
+        />
       </Flex>
     </Inset>
     <Inset>
       <Flex>
-        <Box>
-          <Heading variant="h3" mb={4}>
-            Get In Touch.
-          </Heading>
-          <Text>
-            I'm currently working on Internal Tools @ Facebook, but if you want
-            to get in touch feel free to reach out.
-          </Text>
-        </Box>
-        <SocialLinks links={contactLinks} />
+        <Copy
+          sx={{
+            flex: '1 1 auto',
+          }}
+          headline="Get In Touch."
+        >
+          I'm currently working on Internal Tools @ Facebook, but if you want to
+          get in touch feel free to reach out.
+        </Copy>
+        <SocialLinks
+          sx={{
+            flex: '1 0 auto',
+          }}
+          links={contactLinks}
+        />
       </Flex>
     </Inset>
     <Inset>
