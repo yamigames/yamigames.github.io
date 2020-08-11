@@ -5,8 +5,8 @@ import profileImage from './profile.jpg';
 
 export const Bio = ({ ...props }) => (
   <Flex {...props}>
-    <Box>
-      <Heading mb={16} mr={6} variant="h2">Hey There,</Heading>
+    <Box mr={6}>
+      <Heading mb={16} variant="h2">Hey There,</Heading>
       <Text  mb={16} variant="body">
         I'm a product designer living in California. I use rapid iteration and
         prototyping to help teams build powerful products. I've worked at places
